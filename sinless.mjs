@@ -2,6 +2,7 @@
 import { PlayerDataModel } from "./data-models/actor-data-models.mjs";
 
 // Document classes
+import { SinlessActor } from "./documents/actor.mjs";
 
 // Sheet classes
 
@@ -14,6 +15,7 @@ import { PlayerDataModel } from "./data-models/actor-data-models.mjs";
 Hooks.once('init', function() {
 
 	// Assign document classes
+	CONFIG.Actor.documentClass = SinlessActor
 
 	// Assign data models
 	Object.assign(Config.Actor.dataModels, {
