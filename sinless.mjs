@@ -7,12 +7,16 @@ import { SinlessActor } from "./documents/actor.mjs";
 // Sheet classes
 
 // Helpers and utilities
+import { SINLESS } from "./helpers/config.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
 /* -------------------------------------------- */
 
 Hooks.once('init', function() {
+
+	// Add custom constants for configuration
+	CONFIG.SINLESS = SINLESS
 
 	// Assign document classes
 	CONFIG.Actor.documentClass = SinlessActor
