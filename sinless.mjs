@@ -5,6 +5,7 @@ import { PlayerDataModel } from "./data-models/actor-data-models.mjs";
 import { SinlessActor } from "./documents/actor.mjs";
 
 // Sheet classes
+import { SinlessActorSheet } from "./sheets/actor-sheet.mjs";
 
 // Helpers and utilities
 import { SINLESS } from "./helpers/config.mjs";
@@ -31,4 +32,8 @@ Hooks.once('init', function() {
 	});
 
 	// Assign document sheets
+	Actors.registerSheet('sinless', SinlessActorSheet, {
+		makeDefault: true,
+		label: 'SINLESS.SheetLabels.Actor',
+	});
 });
