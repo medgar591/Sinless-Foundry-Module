@@ -1,0 +1,85 @@
+<header class="sheet-header">
+	<img
+		class="profile-img"
+		src="{{actor.img}}"
+		data-edit="img"
+		data-action="onEditImage"
+		title="{{actor.name}}"
+		height="100"
+		width="100"
+	/>
+	<div class="header-fields">
+		<div class="document-name">
+			<input
+				name="name"
+				type="text"
+				value="{{actor.name}}"
+				placeholder="Name"
+			/>
+		</div>
+		<div class="resources grid grid-3col">
+			<div class="resource flex-group-center">
+				<label for="system.attributes.strength.value" class="resource-label">
+					{{localize "SINLESS.Actor.base.FIELDS.attributes.strength.value.label"}}
+				</label>
+				<div class="resource-content flexrow flex-center flex-between">
+					<input 
+						type="text"
+						name="system.attributes.strength.value"
+						value="{{system.attributes.strength.value}}"
+						data-dtype="Number"
+					/>
+					<span> / </span>
+					<input 
+						type="text"
+						name="system.attributes.strength.max"
+						value="{{system.attributes.strength.max}}"
+						data-dtype="Number"
+					/>
+				</div>
+			</div>
+
+			<div class="resource flex-group-center">
+				<label for="system.attributes.body.value" class="resource-label">
+					{{localize "SINLESS.Actor.base.FIELDS.attributes.body.value.label"}}
+				</label>
+				<div class="resource-content flexrow flex-center flex-between">
+					<input 
+						type="text"
+						name="system.attributes.body.value"
+						value="{{system.attributes.body.value}}"
+						data-dtype="Number"
+					/>
+					<span> / </span>
+					<input 
+						type="text"
+						name="system.attributes.body.max"
+						value="{{system.attributes.body.max}}"
+						data-dtype="Number"
+					/>
+				</div>
+			</div>
+
+			<div class="resource flex-group-center">
+				<label for="system.attributes.reaction.value" class="resource-label">
+					{{localize "SINLESS.Actor.base.FIELDS.attributes.reaction.value.label"}}
+				</label>
+				<div class="resource-content flexrow flex-center flex-between">
+					<input 
+						type="text"
+						name="system.attributes.reaction.value"
+						value="{{system.attributes.reaction.value}}"
+						data-dtype="Number"
+					/>
+					<span> / </span>
+					<input 
+						type="text"
+						name="system.attributes.reaction.max"
+						value="{{system.attributes.reaction.max}}"
+						data-dtype="Number"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
