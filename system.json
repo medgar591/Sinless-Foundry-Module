@@ -2,5 +2,19 @@
 	"id": "sinless",
 	"title": "Sinless",
 	"description": "WIP of the sinless system. Current goal: Functional character sheet",
-	"version": "0.0.1"
+	"version": "0.0.1",
+	"esmodules": ["sinless.mjs"],
+	"styles": ["sinless.css"],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"documentTypes": {
+		"Actor": {
+			"player": {}
+		}
+	}
 }
