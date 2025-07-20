@@ -14,6 +14,10 @@ import { SINLESS } from "./helpers/config.mjs";
 /* -------------------------------------------- */
 
 Hooks.once('init', function() {
+	// Adding utility classes to global context
+	game.sinless = {
+		SinlessActor,
+	};
 
 	// Add custom constants for configuration
 	CONFIG.SINLESS = SINLESS
