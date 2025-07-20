@@ -16,7 +16,9 @@ Hooks.once('init', function() {
 	// Assign document classes
 
 	// Assign data models
-	CONFIG.Actor.dataModels.player = PlayerDataModel;
+	Object.assign(Config.Actor.dataModels, {
+		"player": PlayerDataModel
+	});
 
 	// Assign document sheets
 });
