@@ -46,6 +46,24 @@ export class PlayerDataModel extends ActorDataModel {
 					max: new NumberField({ required: true, integer: true, min: 1, initial: 20 }),
 					value: new NumberField({ required: true, integer: true, min: 1, initial: 3 })
 				})
+			}),
+			pools: new SchemaField({
+				brawn: new SchemaField({
+					max: new NumberField({ required: true, integer: true, min: 1, initial: 5 }),
+					value: new NumberField({ required: true, integer: true, min: 0, initial: 5 })
+				}),
+				finesse: new SchemaField({
+					max: new NumberField({ required: true, integer: true, min: 1, initial: 5 }),
+					value: new NumberField({ required: true, integer: true, min: 0, initial: 5 })
+				}),
+				focus: new SchemaField({
+					max: new NumberField({ required: true, integer: true, min: 1, initial: 5 }),
+					value: new NumberField({ required: true, integer: true, min: 0, initial: 5 })
+				}),
+				resolve: new SchemaField({
+					max: new NumberField({ required: true, integer: true, min: 1, initial: 5 }),
+					value: new NumberField({ required: true, integer: true, min: 0, initial: 5 })
+				})
 			})
 		}
 	}
