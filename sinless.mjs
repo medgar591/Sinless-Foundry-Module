@@ -5,7 +5,7 @@ import { PlayerDataModel } from "./modules/models/actor-data-models.mjs";
 import { SinlessActor } from "./modules/documents/sinless-actor.mjs";
 
 // Sheet classes
-import { SinlessActorSheet } from "./modules/sheets/actor-sheet.mjs";
+import { CharacterSheet } from "./modules/sheets/actor-sheet.mjs";
 
 // Helpers and utilities
 import { SINLESS } from "./modules/config.mjs";
@@ -30,9 +30,12 @@ Hooks.once('init', async () => {
 	});
 
 	// Assign document sheets
-	Actors.registerSheet('sinless', SinlessActorSheet, {
-		makeDefault: true,
-		label: 'SINLESS.SheetLabels.Actor',
+	const SheetConfig = foundry.applications.apps.DocumentSheetConfig;
+	SheetConfig.unregisterSheet(Actor, "core", foundry.appv1.sheets.ActorSheet);
+	SheetConfig.registerSheet(Actor, "sinless", CharacterSheet, { 
+		types: ["player"], 
+		makeDefault: true, 
+		label: "SINLESS.Sheet.Character"
 	});
 
 	// Set up handlebars sheets
@@ -58,7 +61,8 @@ Hooks.once('ready', async () => {
 function preloadHandlebarsTemplates() {
 	
 	const templatePaths = [
-		// "systems/sinless/templates/partials/template.hbs"
+		"systems/sinless/templates/partials/character-sheet-character.hbs",
+		// "systems/sinless/templates/partials/template.hbs",
 	];
 
 	return loadTemplates(tempplatePaths);

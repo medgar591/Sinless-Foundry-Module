@@ -4,7 +4,7 @@ const { api, sheets, ux } = foundry.applications;
  * Extend the basic ActorSheet for players.
  * @extends {ActorSheetV2}
  */
-export class SinlessActorSheet extends api.HandlebarsApplicationMixin(sheets.ActorSheetV2) {
+export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorSheetV2) {
 	
 	sheetContext= {};
 
