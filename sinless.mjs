@@ -2,7 +2,7 @@
 import { PlayerDataModel } from "./modules/models/actor-data-models.mjs";
 
 // Document classes
-import { SinlessActor } from "./modules/documents/actor-documents.mjs";
+import { SinlessActor } from "./modules/documents/sinless-actor.mjs";
 
 // Sheet classes
 import { SinlessActorSheet } from "./modules/sheets/actor-sheet.mjs";
