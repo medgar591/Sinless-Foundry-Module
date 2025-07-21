@@ -6,15 +6,15 @@
 		<input class="bigInputText" type="text" name="name" value="{{actor.name}}">
 		<div class="conditionPhysBox">
 			<div class="conditionPhysLabel">{{localize "SINLESS.System.Physical"}}</div>
-			<div class="conditionPhysValue">{{system.condition.phys.value}}</div>
+			<input class="conditionPhysValue input" type="number" name="system.condition.phys.value" value="{{system.condition.phys.value}}">
 			<div class="conditionPhysDivider"> / </div>
-			<div class="conditionPhysMax">{{system.condition.phys.max}}</div>
+			<input class="conditionPhysMax input" type="number" name="system.condition.phys.max" value="{{system.condition.phys.max}}">
 		</div>
 		<div class="conditionStunBox">
 			<div class="conditionStunLabel">{{localize "SINLESS.System.Stun"}}</div>
-			<div class="conditionStunValue">{{system.condition.stun.value}}</div>
+			<input class="conditionStunValue input" type="number" name="system.condition.stun.value" value="{{system.condition.stun.value}}">
 			<div class="conditionStunDivider"> / </div>
-			<div class="conditionStunMax">{{system.condition.stun.max}}</div>
+			<input class="conditionStunMax input" type="number" name="system.condition.stun.max" value="{{system.condition.stun.max}}">
 		</div>
 	</div>
 </div>
