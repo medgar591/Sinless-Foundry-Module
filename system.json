@@ -1,8 +1,19 @@
 {
 	"id": "sinless",
-	"title": "Sinless",
-	"description": "WIP of the sinless system. Current goal: Functional character sheet",
+	"title": "Sinless Core System",
+	"description": "The Core Sinless System created by Courtney C. Campbell.",
 	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Matt",
+			"discord": "quantomoo2"
+		}
+	],
+	"compatibility": {
+		"minimum": 13,
+		"verified": "13.346",
+		"maximum": 13
+	},
 	"esmodules": ["sinless.mjs"],
 	"styles": ["sinless.css"],
 	"languages": [
@@ -12,6 +23,11 @@
 			"path": "lang/en.json"
 		}
 	],
+	"socket": false,
+	"grid": {
+		"distance": 2,
+		"units": "Meter"
+	},
 	"documentTypes": {
 		"Actor": {
 			"player": {}
