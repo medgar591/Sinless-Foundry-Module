@@ -1,20 +1,40 @@
 <div class="headerBox">
-	<div class="logoBox">
-		<div class="logoImg"><div class="logoText">{{localize "SINLESS.SystemName"}}</div></div>
+	<div class="portraitBox">
+		<!-- TODO: Character Portrait -->
 	</div>
-	<div class="charInfoBox">
-		<input class="bigInputText" type="text" name="name" value="{{actor.name}}">
+	<div class="basicFieldsBox">
+		<input class="characterName bigInputText" type="text" name="name" value="{{actor.name}}">
+		<!-- TODO: Character Full name -->
+		<input class="characterFullName inputText" type="text" value="Full Name" disabled>
+		<!-- TODO: Heritage -->
+		<input class="heritage inputText" type="text" value="Heritage" disabled>
+		<!-- TODO: Ghost Rating -->
+		<input class="ghostRating input" type="number" value="0" disabled>
+	</div>
+	<div class="statusBox">
 		<div class="conditionPhysBox">
 			<div class="conditionPhysLabel">{{localize "SINLESS.System.Physical"}}</div>
 			<input class="conditionPhysValue input" type="number" name="system.condition.phys.value" value="{{system.condition.phys.value}}">
 			<div class="conditionPhysDivider"> / </div>
-			<input class="conditionPhysMax input" type="number" name="system.condition.phys.max" value="{{system.condition.phys.max}}">
+			<input class="conditionPhysMax input" type="number" name="system.condition.phys.max" value="{{system.condition.phys.max}}" disabled>
 		</div>
 		<div class="conditionStunBox">
 			<div class="conditionStunLabel">{{localize "SINLESS.System.Stun"}}</div>
 			<input class="conditionStunValue input" type="number" name="system.condition.stun.value" value="{{system.condition.stun.value}}">
 			<div class="conditionStunDivider"> / </div>
-			<input class="conditionStunMax input" type="number" name="system.condition.stun.max" value="{{system.condition.stun.max}}">
+			<input class="conditionStunMax input" type="number" name="system.condition.stun.max" value="{{system.condition.stun.max}}" disabled>
+		</div>
+		<div class="damageOverBox">
+			<!-- TODO: Damage Over -->
+			0
+		</div>
+		<div class="damagePenaltyBox">
+			<!-- TODO: Damage Penalty -->
+			0
+		</div>
+		<div class="armorBox">
+			<!-- TODO: Armor -->
+			0 / 0
 		</div>
 	</div>
 </div>
