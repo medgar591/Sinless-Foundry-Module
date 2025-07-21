@@ -1,3 +1,9 @@
 {
-	
+	"SINLESS": {
+		"SystemName": "Sinless",
+		"System": {
+			"Physical": "Physical",
+			"Stun": "Stun"
+		}
+	}
 }
