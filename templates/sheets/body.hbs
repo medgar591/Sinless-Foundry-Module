@@ -1,0 +1,30 @@
+<div>
+	This is the body
+	<div class="menuBox">
+		<div class="menuBG"></div>
+		<div class="menuLbl"></div>
+
+		<nav class="tabs menuTabs" data-group="primary-tabs">
+			<div class="menuIcon" style="left: 135px">
+				<a class="item" data-tab="tab1" data-group="primary-tabs">
+					<i class="fa-solid fa-book-open-cover"></i>
+				</a>
+			</div>
+			<div class="menuIcon" style="left: 180px">
+				<a class="item" data-tab="tab2" data-group="primary-tabs">
+					<i class="fa-solid fa-book"></i>
+				</a>
+			</div>
+		</nav>
+	</div>
+	<div class="contentBox">
+		<section class="content">
+			<div class="tab" data-tab="tab1" data-group="primary-tabs">
+				{{> "systems/sinless/templates/partials/character-sheet-character.hbs"}}
+			</div>
+			<div class="tab" data-tab="tab2" data-group="primary-tabs">
+				I am tab #2
+			</div>
+		</section>
+	</div>
+</div>
