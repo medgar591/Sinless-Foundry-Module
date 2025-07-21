@@ -1,3 +1,4 @@
+import { clamp } from "../utils.mjs";
 const { NumberField, SchemaField } = foundry.data.fields;
 
 class ActorDataModel extends foundry.abstract.TypeDataModel {
@@ -14,6 +15,15 @@ class ActorDataModel extends foundry.abstract.TypeDataModel {
 				}) 
 			})
 		}
+	}
+
+	/** @inheritDoc */
+	prepareDerivedData() {
+		super.prepareDerivedData();
+
+		// Clamp condition tracks
+		this.condition.phys.value = clamp(this.condition.phys.value, 0, this.condition.phys.max);
+		this.condition.stun.value = clamp(this.condition.stun.value, 0, this.condition.stun.max);
 	}
 }
 
@@ -66,5 +76,27 @@ export class PlayerDataModel extends ActorDataModel {
 				})
 			})
 		}
+	}
+	
+	/** @inheritDoc */
+	prepareDerivedData() {
+		super.prepareDerivedData();
+
+		// Clamp attributes
+		this.attributes.strength.value = clamp(this.attributes.strength.value, 1, this.attributes.strength.max);
+		this.attributes.body.value = clamp(this.attributes.body.value, 1, this.attributes.body.max);
+		this.attributes.reaction.value = clamp(this.attributes.reaction.value, 1, this.attributes.reaction.max);
+		this.attributes.intelligence.value = clamp(this.attributes.intelligence.value, 1, this.attributes.intelligence.max);
+		this.attributes.willpower.value = clamp(this.attributes.willpower.value, 1, this.attributes.willpower.max);
+		this.attributes.charisma.value = clamp(this.attributes.charisma.value, 1, this.attributes.charisma.max);
+
+		// Calculate Pool Max
+		// TODO
+
+		// Clamp Pools
+		this.pools.brawn.value = clamp(this.pools.brawn.value, 1, this.pools.brawn.max);
+		this.pools.finesse.value = clamp(this.pools.finesse.value, 1, this.pools.finesse.max);
+		this.pools.focus.value = clamp(this.pools.focus.value, 1, this.pools.focus.max);
+		this.pools.resolve.value = clamp(this.pools.resolve.value, 1, this.pools.resolve.max);
 	}
 }
