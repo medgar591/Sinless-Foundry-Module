@@ -1,14 +1,14 @@
 // Data Model classes
-import { PlayerDataModel } from "./data-models/actor-data-models.mjs";
+import { PlayerDataModel } from "./modules/models/actor-data-models.mjs";
 
 // Document classes
-import { SinlessActor } from "./documents/actor.mjs";
+import { SinlessActor } from "./modules/documents/actor-documents.mjs";
 
 // Sheet classes
-import { SinlessActorSheet } from "./sheets/actor-sheet.mjs";
+import { SinlessActorSheet } from "./modules/sheets/actor-sheet.mjs";
 
 // Helpers and utilities
-import { SINLESS } from "./helpers/config.mjs";
+import { SINLESS } from "./modules/config.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
