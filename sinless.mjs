@@ -25,7 +25,7 @@ Hooks.once('init', async () => {
 	CONFIG.Actor.documentClass = SinlessActor
 
 	// Assign data models
-	Object.assign(Config.Actor.dataModels, {
+	Object.assign(CONFIG.Actor.dataModels, {
 		"player": PlayerDataModel
 	});
 
@@ -65,7 +65,7 @@ function preloadHandlebarsTemplates() {
 		// "systems/sinless/templates/partials/template.hbs",
 	];
 
-	return loadTemplates(tempplatePaths);
+	return foundry.applications.handlebars.loadTemplates(templatePaths);
 }
 
 function registerHandlebarsHelpers() {
