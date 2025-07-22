@@ -3,15 +3,15 @@
 	<div class="basicFieldsBox flexcol">
 		<input class="characterName bigInputText" type="text" name="name" value="{{actor.name}}">
 		<!-- TODO: Character Full name -->
-		<input class="characterFullName inputText" type="text" value="Full Name" disabled>
+		<input class="characterFullName inputText" type="text" value="John Doe" disabled>
 		<!-- TODO: Heritage -->
-		<input class="heritage inputText" type="text" value="Heritage" disabled>
+		<input class="heritage inputText" type="text" value="Replica" disabled>
 		<!-- TODO: Ghost Rating -->
-		<input class="ghostRating input" type="number" value="0" disabled>
+		<input class="ghostRating input" type="number" value="8" disabled>
 	</div>
 	<div class="statusBox flexrow">
-		<div class="conditionBox flexcol">
-			<div class="conditionPhysLabel">{{localize "SINLESS.System.Physical"}}</div>
+		<div class="conditionBox flexcol" style="align-items: center;">
+			<div class="conditionPhysLabel flex-center">{{localize "SINLESS.System.Physical"}}</div>
 			<div class="conditionPhysEntryBox flexrow">
 				<input class="conditionPhysValue input" type="number" name="system.condition.phys.value" value="{{system.condition.phys.value}}">
 				<div class="conditionPhysDivider"> / </div>
@@ -27,18 +27,18 @@
 	</div>
 	<div class="extraInfoBox flexcol">
 		<div class="derivedDamageBox flexrow">
-			<div class="damageOverBox flexcol">
+			<div class="damageOverBox flexcol" style="align-items: center;">
 				<!-- TODO: Damage Over -->
 				<div class="damageOverLabel">Over</div>
 				<input class="damageOverValue input" type="number" value="0" disabled>
 			</div>
-			<div class="damagePenaltyBox flexcol">
+			<div class="damagePenaltyBox flexcol" style="align-items: center;">
 				<!-- TODO: Damage Penalty -->
 				<div class="damagePenaltybel">Penalty</div>
 				<input class="damagePenaltyValue input" type="number" value="0" disabled>
 			</div>
 		</div>
-		<div class="armorBox flexcol">
+		<div class="armorBox flexcol" style="align-items: center;">
 			<!-- TODO: Armor -->
 			<div class="armorLabel">Armor (B / I)</div>
 			<div class="armorEntryBox flexrow">
