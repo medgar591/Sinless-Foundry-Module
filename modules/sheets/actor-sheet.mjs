@@ -20,7 +20,7 @@ export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorS
 			closeOnSubmit: false
 		},
 		position: {
-			width: 650
+			width: 800
 		}
 	};
 
