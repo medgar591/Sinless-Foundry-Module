@@ -94,9 +94,9 @@ export class PlayerDataModel extends ActorDataModel {
 		// TODO
 
 		// Clamp Pools
-		this.pools.brawn.value = clamp(this.pools.brawn.value, 1, this.pools.brawn.max);
-		this.pools.finesse.value = clamp(this.pools.finesse.value, 1, this.pools.finesse.max);
-		this.pools.focus.value = clamp(this.pools.focus.value, 1, this.pools.focus.max);
-		this.pools.resolve.value = clamp(this.pools.resolve.value, 1, this.pools.resolve.max);
+		this.pools.brawn.value = clamp(this.pools.brawn.value, 0, this.pools.brawn.max);
+		this.pools.finesse.value = clamp(this.pools.finesse.value, 0, this.pools.finesse.max);
+		this.pools.focus.value = clamp(this.pools.focus.value, 0, this.pools.focus.max);
+		this.pools.resolve.value = clamp(this.pools.resolve.value, 0, this.pools.resolve.max);
 	}
 }
