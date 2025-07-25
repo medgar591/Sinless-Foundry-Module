@@ -1,21 +1,76 @@
-<div>
-	This is the body
-	<div class="menuBox">
-		<div class="menuBG"></div>
-		<div class="menuLbl"></div>
-
-		<nav class="tabs menuTabs" data-group="primary-tabs">
-			<div class="menuIcon" style="left: 135px">
-				<a class="item" data-tab="tab1" data-group="primary-tabs">
-					<i class="fa-solid fa-book-open-cover"></i>
-				</a>
+<div class="body flexrow">
+	<div class="sidebar flexcol">
+		<div class="poolsBox flexcol">
+			<div class="poolLabel flex-left">Brawn</div>
+			<div class="poolEntry flexrow">
+				<input class="poolValue input" type="number" name="system.pools.brawn.value" value="{{system.pools.brawn.value}}">
+				<div class="poolDivider"> / </div>
+				<input class="poolMax input" type="number" name="system.pools.brawn.max" value="{{system.pools.brawn.max}}" disabled>
 			</div>
-			<div class="menuIcon" style="left: 180px">
-				<a class="item" data-tab="tab2" data-group="primary-tabs">
-					<i class="fa-solid fa-book"></i>
-				</a>
+			<div class="poolLabel flex-left">Finesse</div>
+			<div class="poolEntry flexrow">
+				<input class="poolValue input" type="number" name="system.pools.finesse.value" value="{{system.pools.finesse.value}}">
+				<div class="poolDivider"> / </div>
+				<input class="poolMax input" type="number" name="system.pools.finesse.max" value="{{system.pools.finesse.max}}" disabled>
 			</div>
-		</nav>
+			<div class="poolLabel flex-left">Resolve</div>
+			<div class="poolEntry flexrow">
+				<input class="poolValue input" type="number" name="system.pools.resolve.value" value="{{system.pools.resolve.value}}">
+				<div class="poolDivider"> / </div>
+				<input class="poolMax input" type="number" name="system.pools.resolve.max" value="{{system.pools.resolve.max}}" disabled>
+			</div>
+			<div class="poolLabel flex-left">Focus</div>
+			<div class="poolEntry flexrow">
+				<input class="poolValue input" type="number" name="system.pools.focus.value" value="{{system.pools.focus.value}}">
+				<div class="poolDivider"> / </div>
+				<input class="poolMax input" type="number" name="system.pools.focus.max" value="{{system.pools.focus.max}}" disabled>
+			</div>
+		</div>
+		<div class="menuBox">
+			<nav class="tabs vertical" data-group="primary-tabs">
+				<div class="menuBar">
+					<a class="item" data-tab="tab1" data-group="primary-tabs">
+						Attributes
+					</a>
+				</div>
+				<div class="menuBar">
+					<a class="item disabled" data-tab="tab2" data-group="primary-tabs">
+						Skills (WIP)
+					</a>
+				</div>
+				<div class="menuBar">
+					<a class="item disabled" data-tab="tab3" data-group="primary-tabs">
+						Gear (WIP)
+					</a>
+				</div>
+				<div class="menuBar">
+					<a class="item disabled" data-tab="tab3" data-group="primary-tabs">
+						Notes (WIP)
+					</a>
+				</div>
+				<div class="menuBar">
+					<a class="item disabled" data-tab="tab3" data-group="primary-tabs">
+						Rigger (WIP)
+					</a>
+				</div>
+				<div class="menuBar">
+					<a class="item disabled" data-tab="tab3" data-group="primary-tabs">
+						Decker (WIP)
+					</a>
+				</div>
+				<div class="menuBar">
+					<a class="item disabled" data-tab="tab3" data-group="primary-tabs">
+						Mage (WIP)
+					</a>
+				</div>
+				<div class="menuBar">
+					<a class="item disabled" data-tab="tab3" data-group="primary-tabs">
+						Shaman (WIP)
+					</a>
+				</div>
+			</nav>
+		</div>
+		
 	</div>
 	<div class="contentBox">
 		<section class="content">
