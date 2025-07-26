@@ -61,7 +61,7 @@ Hooks.once('ready', async () => {
 function preloadHandlebarsTemplates() {
 	
 	const templatePaths = [
-		"systems/sinless/templates/partials/character-sheet-character.hbs",
+		"systems/sinless/templates/partials/character-sheet-attributes.hbs",
 		// "systems/sinless/templates/partials/template.hbs",
 	];
 
