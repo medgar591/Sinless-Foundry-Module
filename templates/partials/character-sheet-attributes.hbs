@@ -1,3 +1,59 @@
-<div>
-	I am the character sheet
+<div class="flexcol">
+	<h5 class="center"> Primary Attributes </h5>
+	{{#each system.attributes as |attribute key|}}
+	<div class="attribute flexrow">
+		<label class="attributeLabel" for="system.attributes.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.attributes.{{key}}.max" value="{{attribute.max}}" data-dtype="Number">
+		</div>
+	</div>
+	{{/each}}
+	<br>
+	<h5 class="center"> Secondary Attributes </h5>
+	<div class="attribute flexrow">
+		<label class="attributeLabel">ZP</label>
+		<span>5 (5.8) / 6</span>
+	</div>
+	<div class="attribute flexrow">
+		<label class="attributeLabel">Body Index</label>
+		<span>0</span>
+	</div>
+	<div class="attribute flexrow">
+		<label class="attributeLabel">Kismet</label>
+		<div class="flexrow">
+			<input class="input" type="number" value="0" data-dtype="Number" disabled>
+			<span class="center"> / </span>
+			<input class="input" type="number" value="0" data-dtype="Number" disabled>
+		</div>
+	</div>
+	<div class="attribute flexrow">
+		<label class="attributeLabel">Ghost Rating</label>
+		<input class="input" type="number" value="8" data-dtype="Number" disabled>
+	</div>
+	<div class="flexrow">
+		<label class="attributeLabel">Movement</label>
+		<span> 3" (6m) </span>
+	</div>
+	<div class="flexrow">
+		<span class="center">Armor</span>
+		<span class="center">B</span>
+		<span class="center">I</span>
+	</div>
+	<div class="flexrow">
+		<span class="center">Internal</span>
+		<input class="input" type="number" value="0" data-dtype="Number" disabled>
+		<input class="input" type="number" value="0" data-dtype="Number" disabled>
+	</div>
+	<div class="flexrow">
+		<span class="center">Under</span>
+		<input class="input" type="number" value="0" data-dtype="Number" disabled>
+		<input class="input" type="number" value="0" data-dtype="Number" disabled>
+	</div>
+	<div class="flexrow">
+		<span class="center">Outer</span>
+		<input class="input" type="number" value="0" data-dtype="Number" disabled>
+		<input class="input" type="number" value="0" data-dtype="Number" disabled>
+	</div>
 </div>
