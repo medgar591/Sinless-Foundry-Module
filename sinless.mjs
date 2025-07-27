@@ -63,6 +63,7 @@ function preloadHandlebarsTemplates() {
 	const templatePaths = [
 		"systems/sinless/templates/partials/character-sheet-attributes.hbs",
 		"systems/sinless/templates/partials/character-sheet-skills.hbs",
+		"systems/sinless/templates/partials/character-sheet-skills2.hbs",
 		// "systems/sinless/templates/partials/template.hbs",
 	];
 
