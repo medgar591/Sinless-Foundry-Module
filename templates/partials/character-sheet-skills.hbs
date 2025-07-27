@@ -1,21 +1,68 @@
-<div class="flexrow">
-	<div class="flexcol">
-		<h4 class="center">Active Skills</h4>
-		<h5>Brawn</h5>
-		<div class="skill flexrow">
-			<label>Skill Name</label>
-			<input class="input" type="number" value="0" data-dtype="Number" disabled>
+<div class="skillsBox flexcol">
+	<h5>Brawn</h5>
+	{{#each system.skills.brawn as |skill key|}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.brawn.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.brawn.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
 			<span class="center"> / </span>
-			<input class="input" type="number" value="6" data-dtype="Number" disabled>
+			<input class="input" type="number" name="system.skills.brawn.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
 		</div>
 	</div>
-	<div class="flexcol">
-		<h4 class="center">Knowledge Skills</h4>
-		<div class="skill flexrow">
-			<label>Skill Name</label>
-			<input class="input" type="number" value="0" data-dtype="Number" disabled>
+	{{/each}}
+	<h5>Finesse</h5>
+	{{#each system.skills.finesse as |skill key|}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.finesse.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.finesse.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
 			<span class="center"> / </span>
-			<input class="input" type="number" value="6" data-dtype="Number" disabled>
+			<input class="input" type="number" name="system.skills.finesse.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
 		</div>
 	</div>
+	{{/each}}
+	<h5>Focus</h5>
+	{{#each system.skills.focus as |skill key|}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.focus.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.focus.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.focus.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+		</div>
+	</div>
+	{{/each}}
+	<h5>Resoluve</h5>
+	{{#each system.skills.resolve as |skill key|}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.resolve.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.resolve.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.resolve.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+		</div>
+	</div>
+	{{/each}}
+	<h5>Knowledge Skills</h4>
+	{{#each system.skills.knowledge as |skill key|}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.knowledge.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.knowledge.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.knowledge.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+		</div>
+	</div>
+	{{/each}}
+	<h5>Rituals</h4>
+	{{#each system.skills.rituals as |skill key|}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.rituals.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.rituals.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.rituals.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+		</div>
+	</div>
+	{{/each}}
 </div>
