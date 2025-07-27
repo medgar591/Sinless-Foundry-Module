@@ -1,5 +1,5 @@
 import { clamp } from "../utils.mjs";
-const { NumberField, SchemaField } = foundry.data.fields;
+const { NumberField, SchemaField, StringField } = foundry.data.fields;
 
 class ActorDataModel extends foundry.abstract.TypeDataModel {
 	static defineSchema() {
@@ -74,13 +74,226 @@ export class PlayerDataModel extends ActorDataModel {
 					max: new NumberField({ required: true, integer: true, min: 1, initial: 5 }),
 					value: new NumberField({ required: true, integer: true, min: 0, initial: 5 })
 				})
-			})
+			}),
+			skills: new SchemaField({
+				brawn: new SchemaField({
+					athletics: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					cyberneticCombat: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					martialArts: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					}),
+					meleeWeapons: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					throwingWeapons: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					unarmedCombat: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					})
+				}),
+				finesse: new SchemaField({
+					archery: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					articulatedManeuvers: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					energyWeapons: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					firearms: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					gunnery: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					heavyWeapons: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					})
+				}),
+				focus: new SchemaField({
+					artificing: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					biotech: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					hacking: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					drive: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					ewar: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					engineeringAeronautics: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					engineeringArmory: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					engineeringElectronics: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					engineeringIndustrial: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					engineeringMechanical: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					engineeringNautical: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					fly: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					negotiation: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					observation: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					reconnaissance: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					safecracking: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					shadow: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					})
+				}),
+				resolve: new SchemaField({
+					astralSenses: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					channeling: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					coercion: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					conjuring: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					fascination: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					leadership: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					sorcery: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					subterfuge: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					survival: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					})
+				}),
+				knowledge: new SchemaField({
+					knowledge1: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					}),
+					knowledge2: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					}),
+					knowledge3: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					}),
+					knowledge4: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					})
+				}),
+				rituals: new SchemaField({
+					ritual1: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					}),
+					ritual2: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					}),
+					ritual3: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					}),
+					ritual4: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+						name: new StringField({ required: true, blank: true})
+					}),
+				})
+			}),
+
 		}
 	}
 	
 	/** @inheritDoc */
 	prepareDerivedData() {
 		super.prepareDerivedData();
+
+		// Clamp Skills
+		// TODO
+
+		// Calculate Grouped Skills
 
 		// Clamp attributes
 		this.attributes.strength.value = clamp(this.attributes.strength.value, 1, this.attributes.strength.max);
