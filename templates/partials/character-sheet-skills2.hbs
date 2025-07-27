@@ -1,0 +1,26 @@
+<div class="skillsBox flexcol">
+	<h4>Ettiquettes</h4>
+	{{/each}}
+	<h4>Knowledge Skills</h4>
+	{{#each system.skills.knowledge as |skill key|}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.knowledge.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.knowledge.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.knowledge.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+		</div>
+	</div>
+	{{/each}}
+	<h4>Rituals</h4>
+	{{#each system.skills.rituals as |skill key|}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.rituals.{{key}}.value">{{key}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.rituals.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.rituals.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+		</div>
+	</div>
+	{{/each}}
+</div>
