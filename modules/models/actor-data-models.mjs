@@ -304,7 +304,11 @@ export class PlayerDataModel extends ActorDataModel {
 		this.attributes.charisma.value = clamp(this.attributes.charisma.value, 1, this.attributes.charisma.max);
 
 		// Calculate Pool Max
-		// TODO
+		this.pools.brawn.max = Math.floor(this.attributes.strength.value + (this.attributes.body.value / 2) + (this.attributes.willpower.value / 4));
+		this.pools.finesse.max = Math.floor(this.attributes.reaction.value + (this.attributes.body.value / 2) + (this.attributes.intelligence.value / 4));
+		this.pools.focus.max = Math.floor(this.attributes.intelligence.value + (this.attributes.reaction.value / 2) + (this.attributes.willpower.value / 4));
+		this.pools.resolve.max = Math.floor(this.attributes.willpower.value + (this.attributes.charisma.value / 2) + (this.attributes.intelligence.value / 2));
+		// TODO: Charisma bonus
 
 		// Clamp Pools
 		this.pools.brawn.value = clamp(this.pools.brawn.value, 0, this.pools.brawn.max);
