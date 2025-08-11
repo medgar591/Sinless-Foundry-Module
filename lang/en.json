@@ -3,7 +3,8 @@
 		"SystemName": "Sinless",
 		"System": {
 			"Physical": "Physical",
-			"Stun": "Stun"
+			"Stun": "Stun",
+			"ConditionPenalty": "Penalty"
 		}
 	}
 }

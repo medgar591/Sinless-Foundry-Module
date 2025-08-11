@@ -24,6 +24,7 @@ class ActorDataModel extends foundry.abstract.TypeDataModel {
 		// Clamp condition tracks
 		this.condition.phys.value = clamp(this.condition.phys.value, 0, this.condition.phys.max);
 		this.condition.stun.value = clamp(this.condition.stun.value, 0, this.condition.stun.max);
+		this.condition.penalty = -1 * (Math.floor(this.condition.phys.value / 3) + Math.floor(this.condition.stun.value / 3))
 	}
 }
 
