@@ -34,6 +34,7 @@ export class PlayerDataModel extends ActorDataModel {
 			...super.defineSchema(),
 			fullName: new StringField({ required: false, blank: true}),
 			heritage: new StringField({ required: false, blank: true}),
+			damageOverflow: new NumberField({ required: false, integer: true, min: 0}),
 			attributes: new SchemaField({
 				strength: new SchemaField({
 					max: new NumberField({ required: true, integer: true, min: 1, initial: 20 }),
