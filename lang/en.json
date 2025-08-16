@@ -8,7 +8,15 @@
 			"FullName": "Full Name",
 			"Heritage": "Heritage",
 			"Movement": "Movement",
-			"ArmorB/I": "Armor (B / I)",
+			"Armor": {
+				"title": "Armor",
+				"B/I": "Armor (B / I)",
+				"Ballistic": "Ballistic",
+				"Impact": "Impact",
+				"Internal": "Internal",
+				"Under": "Under",
+				"Outer": "Outer"
+			},
 			"Over": "Over",
 			"Brawn": "Brawn",
 			"Finesse": "Finesse",
