@@ -4,7 +4,8 @@
 		"System": {
 			"Physical": "Physical",
 			"Stun": "Stun",
-			"ConditionPenalty": "Penalty"
+			"ConditionPenalty": "Penalty",
+			"FullName": "Full Name"
 		}
 	}
 }

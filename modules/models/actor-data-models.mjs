@@ -32,6 +32,7 @@ export class PlayerDataModel extends ActorDataModel {
 	static defineSchema() {
 		return {
 			...super.defineSchema(),
+			fullName: new StringField({ required: false, blank: true}),
 			attributes: new SchemaField({
 				strength: new SchemaField({
 					max: new NumberField({ required: true, integer: true, min: 1, initial: 20 }),

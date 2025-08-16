@@ -2,8 +2,7 @@
 	<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" style="max-width: fit-content;"/>
 	<div class="basicFieldsBox flexcol">
 		<input class="characterName bigInputText" type="text" name="name" value="{{actor.name}}">
-		<!-- TODO: Character Full name -->
-		<input class="characterFullName inputText" type="text" value="John Doe" disabled>
+		<input class="characterFullName inputText" type="text" name="system.fullName" value="{{system.fullName}}" placeholder="{{localize "SINLESS.System.FullName"}}">
 		<!-- TODO: Heritage -->
 		<input class="heritage inputText" type="text" value="Replica" disabled>
 		<!-- TODO: Ghost Rating -->
