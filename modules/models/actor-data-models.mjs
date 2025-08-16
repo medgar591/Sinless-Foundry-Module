@@ -21,11 +21,6 @@ class ActorDataModel extends foundry.abstract.TypeDataModel {
 	/** @inheritDoc */
 	prepareDerivedData() {
 		super.prepareDerivedData();
-
-		// Clamp condition tracks
-		this.condition.phys.value = clamp(this.condition.phys.value, 0, this.condition.phys.max);
-		this.condition.stun.value = clamp(this.condition.stun.value, 0, this.condition.stun.max);
-		this.condition.penalty = -1 * (Math.floor(this.condition.phys.value / 3) + Math.floor(this.condition.stun.value / 3))
 	}
 }
 
@@ -313,6 +308,15 @@ export class PlayerDataModel extends ActorDataModel {
 		this.pools.focus.max = Math.floor(this.attributes.intelligence.value + (this.attributes.reaction.value / 2) + (this.attributes.willpower.value / 4));
 		this.pools.resolve.max = Math.floor(this.attributes.willpower.value + (this.attributes.charisma.value / 2) + (this.attributes.intelligence.value / 2));
 		// TODO: Charisma bonus
+
+		// Calculate Track Max
+		this.condition.phys.max = 6 + Math.floor(this.attributes.body.value / 2);
+		this.condition.stun.max = 6 + Math.floor(this.attributes.willpower.value / 2);
+
+		// Clamp condition tracks
+		this.condition.phys.value = clamp(this.condition.phys.value, 0, this.condition.phys.max);
+		this.condition.stun.value = clamp(this.condition.stun.value, 0, this.condition.stun.max);
+		this.condition.penalty = -1 * (Math.floor(this.condition.phys.value / 3) + Math.floor(this.condition.stun.value / 3))
 
 		// Clamp Pools
 		this.pools.brawn.value = clamp(this.pools.brawn.value, 0, this.pools.brawn.max);
