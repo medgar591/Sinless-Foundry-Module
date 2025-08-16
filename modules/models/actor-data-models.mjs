@@ -13,7 +13,8 @@ class ActorDataModel extends foundry.abstract.TypeDataModel {
 					max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
 					value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
 				}) 
-			})
+			}),
+			movement: new StringField({ required: false, blank: true})
 		}
 	}
 

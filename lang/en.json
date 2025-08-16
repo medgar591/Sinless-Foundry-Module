@@ -6,7 +6,8 @@
 			"Stun": "Stun",
 			"ConditionPenalty": "Penalty",
 			"FullName": "Full Name",
-			"Heritage": "Heritage"
+			"Heritage": "Heritage",
+			"Movement": "Movement"
 		}
 	}
 }
