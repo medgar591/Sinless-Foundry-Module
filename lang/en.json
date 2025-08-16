@@ -7,7 +7,8 @@
 			"ConditionPenalty": "Penalty",
 			"FullName": "Full Name",
 			"Heritage": "Heritage",
-			"Movement": "Movement"
+			"Movement": "Movement",
+			"ArmorB/I": "Armor (B / I)"
 		}
 	}
 }

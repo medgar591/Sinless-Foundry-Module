@@ -14,7 +14,11 @@ class ActorDataModel extends foundry.abstract.TypeDataModel {
 					value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
 				}) 
 			}),
-			movement: new StringField({ required: false, blank: true})
+			movement: new StringField({ required: false, blank: true}),
+			armor: new SchemaField({
+				ballistic: new NumberField({ required: false, integer: true, min: 0, initial: 0}),
+				impact: new NumberField({ required: false, integer: true, min: 0, initial: 0})
+			})
 		}
 	}
 

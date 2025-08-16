@@ -36,12 +36,11 @@
 			</div>
 		</div>
 		<div class="armorBox flexcol" style="align-items: center;">
-			<!-- TODO: Armor -->
-			<div class="armorLabel">Armor (B / I)</div>
+			<div class="armorLabel">{{localize "ArmorBI"}}</div>
 			<div class="armorEntryBox flexrow">
-				<input class="armorBallisticValue input" type="number" value="0" disabled>
+				<input class="armorBallisticValue input" type="number"name="system.armor.ballistic" value="{{system.armor.ballistic}}">
 				<div class="armorDivider center"> / </div>
-				<input class="armorImpactValue input" type="number" value="0" disabled>
+				<input class="armorImpactValue input" type="number" name="system.armor.impact" value="{{system.armor.impact}}">
 			</div>
 		</div>
 	</div>
