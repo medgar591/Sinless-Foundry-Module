@@ -9,7 +9,20 @@
 			"Heritage": "Heritage",
 			"Movement": "Movement",
 			"ArmorB/I": "Armor (B / I)",
-			"Over": "Over"
+			"Over": "Over",
+			"Brawn": "Brawn",
+			"Finesse": "Finesse",
+			"Resolve": "Resolve",
+			"Focus": "Focus",
+			"Attributes": "Attributes",
+			"ActiveSkills": "Active Skills",
+			"SecondarySkills": "Secondary Skills",
+			"Gear": "Gear",
+			"Notes": "Notes",
+			"Rigger": "Rigger",
+			"Decker": "Decker",
+			"Mage": "Mage",
+			"Shaman": "Shaman"
 		}
 	}
 }
