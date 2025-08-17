@@ -331,8 +331,10 @@ export class PlayerDataModel extends ActorDataModel {
 		this.condition.phys.max = 6 + Math.floor(this.attributes.body.value / 2);
 		this.condition.stun.max = 6 + Math.floor(this.attributes.willpower.value / 2);
 
+
 		super.prepareDerivedData();
 
+		
 		// Calculate Pool Max
 		this.pools.brawn.max = Math.floor(this.attributes.strength.value + (this.attributes.body.value / 2) + (this.attributes.willpower.value / 4));
 		this.pools.finesse.max = Math.floor(this.attributes.reaction.value + (this.attributes.body.value / 2) + (this.attributes.intelligence.value / 4));
