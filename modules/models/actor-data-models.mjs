@@ -325,12 +325,7 @@ export class PlayerDataModel extends ActorDataModel {
 	prepareDerivedData() {
 		// These must be done before calling super so that we correctly clamp condition tracks
 		// Clamp attributes
-		this.attributes.strength.value = clamp(this.attributes.strength.value, 1, this.attributes.strength.max);
-		this.attributes.body.value = clamp(this.attributes.body.value, 1, this.attributes.body.max);
-		this.attributes.reaction.value = clamp(this.attributes.reaction.value, 1, this.attributes.reaction.max);
-		this.attributes.intelligence.value = clamp(this.attributes.intelligence.value, 1, this.attributes.intelligence.max);
-		this.attributes.willpower.value = clamp(this.attributes.willpower.value, 1, this.attributes.willpower.max);
-		this.attributes.charisma.value = clamp(this.attributes.charisma.value, 1, this.attributes.charisma.max);
+		Object.values(this.attributes).forEach(stat => {stat.value = clamp(stat.value, 1, stat.max);});
 
 		// Calculate Track Max
 		this.condition.phys.max = 6 + Math.floor(this.attributes.body.value / 2);
@@ -346,17 +341,17 @@ export class PlayerDataModel extends ActorDataModel {
 		// TODO: Charisma bonus
 
 		// Clamp Pools
-		this.pools.brawn.value = clamp(this.pools.brawn.value, 0, this.pools.brawn.max);
-		this.pools.finesse.value = clamp(this.pools.finesse.value, 0, this.pools.finesse.max);
-		this.pools.focus.value = clamp(this.pools.focus.value, 0, this.pools.focus.max);
-		this.pools.resolve.value = clamp(this.pools.resolve.value, 0, this.pools.resolve.max);
+		Object.values(this.pools).forEach(pool => {pool.value = clamp(pool.value, 0, pool.max);});
 
 		// Calculate Armor
 		this.armor.ballistic = this.armorDetail.internal.ballistic + this.armorDetail.under.ballistic + this.armorDetail.outer.ballistic;
 		this.armor.impact = this.armorDetail.internal.impact + this.armorDetail.under.impact + this.armorDetail.outer.impact;
 
 		// Clamp Skills
-		// TODO
+		Object.values(this.skills.brawn).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
+		Object.values(this.skills.finesse).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
+		Object.values(this.skills.focus).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
+		Object.values(this.skills.resolve).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 
 		// Calculate Grouped Skills
 		this.skills.meta.melee = Math.max(
@@ -394,7 +389,7 @@ export class PlayerDataModel extends ActorDataModel {
 		// Calculating ZP
 		if (this.zp.base <= 0) this.zp.base=0; //Making sure the field has an explicit 0 always
 		// TODO: Modify exact based on gear and cyberware
-		this.zp.exact = Math.floor(this.zp.exact * 100) / 100
+		this.zp.exact = Math.floor(this.zp.exact * 100) / 100 // Ensures only 2 digit precision
 		this.zp.exact = Math.min(this.zp.base, this.zp.exact);
 		this.zp.value = Math.max(0, sinRound(this.zp.exact));
 

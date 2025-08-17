@@ -6,6 +6,7 @@ Currently a work in progress.
 
 - [ ] Modifying anything on another tab redirects you to the 1st tab on save
 	- Check out Universal Tabletop System & Torg Eternity for examples using ApplicationV2 with tabs
+- [ ] Setting a pool value to something like -10 sometimes doesn't submit when hitting enter, leaving the value until something else updates
 
 ## Requested Enhancements
 
