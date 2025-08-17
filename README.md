@@ -15,15 +15,15 @@ Currently a work in progress.
   - [x] Header Section
   - [x] Sidebar Section
   - [ ] Charisma bonus for pools
-  - [ ] Active Skills Page
+  - [x] Active Skills Page
     - [x] Logic for meta skills
     - [x] Brawn implementation
       - [x] Implement 1 skill
       - [x] Martial Arts
       - [x] Other skills
     - [x] Finess implementation
-    - [ ] Focus implementation
-    - [ ] Resolve implementation
+    - [x] Focus implementation
+    - [x] Resolve implementation
   - [ ] Secondary Skills Page
     - [ ] Ettiquettes
     - [ ] Knowledge Skills

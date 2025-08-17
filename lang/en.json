@@ -54,7 +54,10 @@
 			"Skills": {
 				"meta": {
 					"melee": "Melee",
-					"ranged": "Ranged"
+					"ranged": "Ranged",
+					"computers": "Computers",
+					"engineering": "Engineering",
+					"vehicles": "Vehicles"
 				},
 				"athletics": "Athletics",
 				"cyberneticCombat": "Cybernetic Combat",
@@ -76,7 +79,24 @@
 				"leadership": "Leadership",
 				"sorcery": "Sorcery",
 				"subterfuge": "Subterfuge",
-				"survival": "Survival"
+				"survival": "Survival",
+				"artificing": "Artificing",
+				"biotech": "Biotech",
+				"hacking": "Hacking",
+				"drive": "Drive",
+				"ewar": "E-War",
+				"engineeringAeronautics": "Aeronautics",
+				"engineeringArmory": "Armory",
+				"engineeringElectronics": "Electronics",
+				"engineeringIndustrial": "Industrial",
+				"engineeringMechanical": "Mechanical",
+				"engineeringNautical": "Nautical",
+				"fly": "Fly",
+				"negotiation": "Negotiation",
+				"observation": "Observation",
+				"reconnaissance": "Reconnaissance",
+				"safecracking": "Safecracking",
+				"shadow": "Shadow"
 			}
 		}
 	}

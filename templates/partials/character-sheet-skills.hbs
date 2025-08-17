@@ -1,5 +1,5 @@
 <div class="skillsBox flexcol">
-	<h4>{{localize "SINLESS.System.Brawn"}}</h4>
+	<h4 style="margin-top: 1rem;">{{localize "SINLESS.System.Brawn"}}</h4>
 	<div class="skill flexrow">
 		<label class="skillLabel" for="system.skills.brawn.athletics.value">{{localize "SINLESS.System.Skills.athletics"}}</label>
 		<div class="flexrow">
@@ -105,17 +105,152 @@
 		</div>
 	</div>
 
-	<h4>Focus</h4>
-	{{#each system.skills.focus as |skill key|}}
+	<h4>{{localize "SINLESS.System.Focus"}}</h4>
 	<div class="skill flexrow">
-		<label class="skillLabel" for="system.skills.focus.{{key}}.value">{{key}}</label>
+		<label class="skillLabel" for="system.skills.focus.artificing.value">{{localize "SINLESS.System.Skills.artificing"}}</label>
 		<div class="flexrow">
-			<input class="input" type="number" name="system.skills.focus.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<input class="input" type="number" name="system.skills.focus.artificing.value" value="{{system.skills.focus.artificing.value}}" data-dtype="Number">
 			<span class="center"> / </span>
-			<input class="input" type="number" name="system.skills.focus.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+			<input class="input" type="number" name="system.skills.focus.artificing.max" value="{{system.skills.focus.artificing.max}}" data-dtype="Number">
 		</div>
 	</div>
-	{{/each}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.focus.biotech.value">{{localize "SINLESS.System.Skills.biotech"}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.focus.biotech.value" value="{{system.skills.focus.biotech.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.focus.biotech.max" value="{{system.skills.focus.biotech.max}}" data-dtype="Number">
+		</div>
+	</div>
+	<h6>{{localize "SINLESS.System.Skills.meta.computers"}}: {{system.skills.meta.computers}}</h6>
+	<div class="indent">
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.hacking.value">{{localize "SINLESS.System.Skills.hacking"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.hacking.value" value="{{system.skills.focus.hacking.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.hacking.max" value="{{system.skills.focus.hacking.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.ewar.value">{{localize "SINLESS.System.Skills.ewar"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.ewar.value" value="{{system.skills.focus.ewar.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.ewar.max" value="{{system.skills.focus.ewar.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.safecracking.value">{{localize "SINLESS.System.Skills.safecracking"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.safecracking.value" value="{{system.skills.focus.safecracking.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.safecracking.max" value="{{system.skills.focus.safecracking.max}}" data-dtype="Number">
+			</div>
+		</div>
+	</div>
+	<h6>{{localize "SINLESS.System.Skills.meta.engineering"}}: {{system.skills.meta.engineering}}</h6>
+	<div class="indent">
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.engineeringAeronautics.value">{{localize "SINLESS.System.Skills.engineeringAeronautics"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.engineeringAeronautics.value" value="{{system.skills.focus.engineeringAeronautics.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.engineeringAeronautics.max" value="{{system.skills.focus.engineeringAeronautics.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.engineeringArmory.value">{{localize "SINLESS.System.Skills.engineeringArmory"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.engineeringArmory.value" value="{{system.skills.focus.engineeringArmory.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.engineeringArmory.max" value="{{system.skills.focus.engineeringArmory.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.engineeringElectronics.value">{{localize "SINLESS.System.Skills.engineeringElectronics"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.engineeringElectronics.value" value="{{system.skills.focus.engineeringElectronics.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.engineeringElectronics.max" value="{{system.skills.focus.engineeringElectronics.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.engineeringIndustrial.value">{{localize "SINLESS.System.Skills.engineeringIndustrial"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.engineeringIndustrial.value" value="{{system.skills.focus.engineeringIndustrial.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.engineeringIndustrial.max" value="{{system.skills.focus.engineeringIndustrial.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.engineeringMechanical.value">{{localize "SINLESS.System.Skills.engineeringMechanical"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.engineeringMechanical.value" value="{{system.skills.focus.engineeringMechanical.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.engineeringMechanical.max" value="{{system.skills.focus.engineeringMechanical.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.engineeringNautical.value">{{localize "SINLESS.System.Skills.engineeringNautical"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.engineeringNautical.value" value="{{system.skills.focus.engineeringNautical.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.engineeringNautical.max" value="{{system.skills.focus.engineeringNautical.max}}" data-dtype="Number">
+			</div>
+		</div>
+	</div>
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.focus.negotiation.value">{{localize "SINLESS.System.Skills.negotiation"}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.focus.negotiation.value" value="{{system.skills.focus.negotiation.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.focus.negotiation.max" value="{{system.skills.focus.negotiation.max}}" data-dtype="Number">
+		</div>
+	</div>
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.focus.observation.value">{{localize "SINLESS.System.Skills.observation"}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.focus.observation.value" value="{{system.skills.focus.observation.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.focus.observation.max" value="{{system.skills.focus.observation.max}}" data-dtype="Number">
+		</div>
+	</div>
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.focus.reconnaissance.value">{{localize "SINLESS.System.Skills.reconnaissance"}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.focus.reconnaissance.value" value="{{system.skills.focus.reconnaissance.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.focus.reconnaissance.max" value="{{system.skills.focus.reconnaissance.max}}" data-dtype="Number">
+		</div>
+	</div>
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.focus.shadow.value">{{localize "SINLESS.System.Skills.shadow"}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.focus.shadow.value" value="{{system.skills.focus.shadow.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.focus.shadow.max" value="{{system.skills.focus.shadow.max}}" data-dtype="Number">
+		</div>
+	</div>
+	<h6>{{localize "SINLESS.System.Skills.meta.vehicles"}}: {{system.skills.meta.vehicles}}</h6>
+	<div class="indent">
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.drive.value">{{localize "SINLESS.System.Skills.drive"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.drive.value" value="{{system.skills.focus.drive.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.drive.max" value="{{system.skills.focus.drive.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.focus.fly.value">{{localize "SINLESS.System.Skills.fly"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.focus.fly.value" value="{{system.skills.focus.fly.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.focus.fly.max" value="{{system.skills.focus.fly.max}}" data-dtype="Number">
+			</div>
+		</div>
+	</div>
 
 	<h4>{{localize "SINLESS.System.Resolve"}}</h4>
 	{{#each system.skills.resolve as |skill key|}}
