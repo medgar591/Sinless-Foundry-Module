@@ -80,7 +80,7 @@ export class PlayerDataModel extends ActorDataModel {
 					value: new NumberField({ required: true, integer: true, min: 1, initial: 3 })
 				})
 			}),
-			charismaBonusChoice: new StringField({ requierd: true, blank: false }),
+			charismaBonusChoice: new StringField({ requierd: true, blank: false,  }),
 			pools: new SchemaField({
 				brawn: new SchemaField({
 					max: new NumberField({ required: true, integer: true, min: 1, initial: 5 }),
@@ -368,11 +368,15 @@ export class PlayerDataModel extends ActorDataModel {
 
 		
 		// Calculate Pool Max
-		this.pools.brawn.max = Math.floor(this.attributes.strength.value + (this.attributes.body.value / 2) + (this.attributes.willpower.value / 4));
-		this.pools.finesse.max = Math.floor(this.attributes.reaction.value + (this.attributes.body.value / 2) + (this.attributes.intelligence.value / 4));
-		this.pools.focus.max = Math.floor(this.attributes.intelligence.value + (this.attributes.reaction.value / 2) + (this.attributes.willpower.value / 4));
-		this.pools.resolve.max = Math.floor(this.attributes.willpower.value + (this.attributes.charisma.value / 2) + (this.attributes.intelligence.value / 2));
-		// TODO: Charisma bonus
+		// Canonical procedure is to do the math together and round at the very end
+		this.pools.brawn.max = this.attributes.strength.value + (this.attributes.body.value / 2) + (this.attributes.willpower.value / 4);
+		this.pools.finesse.max = this.attributes.reaction.value + (this.attributes.body.value / 2) + (this.attributes.intelligence.value / 4);
+		this.pools.focus.max = this.attributes.intelligence.value + (this.attributes.reaction.value / 2) + (this.attributes.willpower.value / 4);
+		this.pools.resolve.max = this.attributes.willpower.value + (this.attributes.charisma.value / 2) + (this.attributes.intelligence.value / 2);
+		
+		if (this.pools[this.charismaBonusChoice]?.max !== undefined) { this.pools[this.charismaBonusChoice].max += this.attributes.charisma.value / 4;}
+		
+		Object.values(this.pools).forEach(pool => {pool.max = sinRound(pool.max);});
 
 		// Clamp Pools
 		Object.values(this.pools).forEach(pool => {pool.value = clamp(pool.value, 0, pool.max);});

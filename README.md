@@ -7,15 +7,18 @@ Currently a work in progress.
 - [ ] Modifying anything on another tab redirects you to the 1st tab on save
 	- Check out Universal Tabletop System & Torg Eternity for examples using ApplicationV2 with tabs
 	- Definitely double check how I handle onRender for actor-sheet.mjs
+- [ ] You can't change the picture anymore?
 - [ ] Setting a pool value to something like -10 sometimes doesn't submit when hitting enter, leaving the value until something else updates
 
 ## Requested Enhancements
 
+- [ ] Review the work to convert over to using formGroup and formInput for all the fields
+
 ## Future Vision
-- [ ] PC Sheet MVP
+- [x] PC Sheet MVP
   - [x] Header Section
   - [x] Sidebar Section
-  - [ ] Charisma bonus for pools
+  - [x] Charisma bonus for pools
   - [x] Active Skills Page
     - [x] Logic for meta skills
     - [x] Brawn implementation

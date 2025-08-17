@@ -14,10 +14,10 @@ SINLESS.attributes = {
 };
 
 SINLESS.pools = {
-	brawn: 'SINLESS.System.Brawn',
-	finesse: 'SINLESS.System.Finesse',
-	focus: 'SINLESS.System.Focus',
-	resolve: 'SINLESS.System.Resolve',
+	brawn: 'SINLESS.System.brawn',
+	finesse: 'SINLESS.System.finesse',
+	focus: 'SINLESS.System.focus',
+	resolve: 'SINLESS.System.resolve',
 };
 
 SINLESS.conditionTracks = {

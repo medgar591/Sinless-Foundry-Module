@@ -10,9 +10,13 @@
 		</div>
 	</div>
 	{{/each}}
-	<select name="system.charismaBonusChoice">
-		{{selectOptions config.pools selected=system.charismaBonusChoice localize=true}}
-	</select>
+	<div class="flexrow">
+		<label class="indent" for="system.charismaBonusChoice">{{localize "SINLESS.System.CharismaChoice"}}</label>
+		<select name="system.charismaBonusChoice">
+			{{selectOptions config.pools selected=system.charismaBonusChoice localize=true}}
+		</select>
+	</div>
+	
 	<h4 class="center">{{localize "SINLESS.System.Attributes.titleSecondary"}}</h4>
 	<div class="attribute flexrow">
 		<label class="attributeLabel">{{localize "SINLESS.System.ZP.full"}}</label>

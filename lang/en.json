@@ -18,10 +18,10 @@
 				"Outer": "Outer"
 			},
 			"Over": "Over",
-			"Brawn": "Brawn",
-			"Finesse": "Finesse",
-			"Resolve": "Resolve",
-			"Focus": "Focus",
+			"brawn": "Brawn",
+			"finesse": "Finesse",
+			"resolve": "Resolve",
+			"focus": "Focus",
 			"Attributes": {
 				"title": "Attributes",
 				"titlePrimary": "Primary Attributes",
@@ -33,6 +33,7 @@
 				"willpower": "Willpower",
 				"charisma": "Charisma"
 			},
+			"CharismaChoice": "Apply bonus to this pool: ",
 			"ActiveSkills": "Active Skills",
 			"SecondarySkills": "Secondary Skills",
 			"Gear": "Gear",
