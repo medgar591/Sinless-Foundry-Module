@@ -35,6 +35,20 @@ export class PlayerDataModel extends ActorDataModel {
 			fullName: new StringField({ required: false, blank: true}),
 			heritage: new StringField({ required: false, blank: true}),
 			damageOverflow: new NumberField({ required: false, integer: true, min: 0}),
+			armorDetail: new SchemaField({
+				internal: new SchemaField({
+					ballistic: new NumberField({ required: false, integer: true, min: 0, initial: 0}),
+					impact: new NumberField({ required: false, integer: true, min: 0, initial: 0})
+				}),
+				under: new SchemaField({
+					ballistic: new NumberField({ required: false, integer: true, min: 0, initial: 0}),
+					impact: new NumberField({ required: false, integer: true, min: 0, initial: 0})
+				}),
+				outer: new SchemaField({
+					ballistic: new NumberField({ required: false, integer: true, min: 0, initial: 0}),
+					impact: new NumberField({ required: false, integer: true, min: 0, initial: 0})
+				})
+			}),
 			attributes: new SchemaField({
 				strength: new SchemaField({
 					max: new NumberField({ required: true, integer: true, min: 1, initial: 20 }),
@@ -328,5 +342,9 @@ export class PlayerDataModel extends ActorDataModel {
 		this.pools.finesse.value = clamp(this.pools.finesse.value, 0, this.pools.finesse.max);
 		this.pools.focus.value = clamp(this.pools.focus.value, 0, this.pools.focus.max);
 		this.pools.resolve.value = clamp(this.pools.resolve.value, 0, this.pools.resolve.max);
+
+		// Calculate Armor
+		this.armor.ballistic = this.armorDetail.internal.ballistic + this.armorDetail.under.ballistic + this.armorDetail.outer.ballistic;
+		this.armor.impact = this.armorDetail.internal.impact + this.armorDetail.under.impact + this.armorDetail.outer.impact;
 	}
 }
