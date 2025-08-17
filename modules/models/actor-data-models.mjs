@@ -300,7 +300,10 @@ export class PlayerDataModel extends ActorDataModel {
 					}),
 				})
 			}),
-
+			zp: new SchemaField({
+				exact: new NumberField({ required: true, integer: false, initial: 6}),
+				base: new NumberField({ required: true, integer: true, initial: 6})
+			}),
 		}
 	}
 	
