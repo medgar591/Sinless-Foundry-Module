@@ -352,6 +352,8 @@ export class PlayerDataModel extends ActorDataModel {
 		Object.values(this.skills.finesse).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 		Object.values(this.skills.focus).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 		Object.values(this.skills.resolve).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
+		Object.values(this.skills.knowledge).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
+		Object.values(this.skills.rituals).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 
 		// Calculate Grouped Skills
 		this.skills.meta.melee = Math.max(
