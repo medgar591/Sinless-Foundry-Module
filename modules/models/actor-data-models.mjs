@@ -354,6 +354,7 @@ export class PlayerDataModel extends ActorDataModel {
 		// TODO
 
 		// Calculating ZP
+		if (this.zp.base <= 0) this.zp.base=0; //Making sure the field has an explicit 0 always
 		// TODO: Modify exact based on gear and cyberware
 		this.zp.exact = Math.floor(this.zp.exact * 100) / 100
 		this.zp.exact = Math.min(this.zp.base, this.zp.exact);
