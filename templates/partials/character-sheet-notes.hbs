@@ -1,0 +1,8 @@
+<div class="full">
+	{{#if isEditable}} 
+	<prose-mirror class="full" name="system.notes" data-document-u-u-i-d="{{actor.uuid}}" value="{{system.notes}}" collaborate="true" toggled="true">
+      	{{{enrichedNotes}}}
+	</prose-mirror>
+	{{else}} {{{enrichedNotes}}}
+	{{/if}}
+</div>

@@ -6,6 +6,7 @@ Currently a work in progress.
 
 - [ ] Modifying anything on another tab redirects you to the 1st tab on save
 	- Check out Universal Tabletop System & Torg Eternity for examples using ApplicationV2 with tabs
+	- Definitely double check how I handle onRender for actor-sheet.mjs
 - [ ] Setting a pool value to something like -10 sometimes doesn't submit when hitting enter, leaving the value until something else updates
 
 ## Requested Enhancements
@@ -24,8 +25,8 @@ Currently a work in progress.
     - [x] Finess implementation
     - [x] Focus implementation
     - [x] Resolve implementation
-  - [ ] Secondary Skills Page
+  - [x] Secondary Skills Page
     - [x] Ettiquettes
-    - [ ] Knowledge Skills
-    - [ ] Rituals
-  - [ ] Notes Page
+    - [x] Knowledge Skills
+    - [x] Rituals
+  - [x] Notes Page

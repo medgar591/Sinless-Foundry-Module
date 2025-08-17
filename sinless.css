@@ -74,3 +74,8 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 .indent {
 	padding-left: 1rem;
 }
+
+.full {
+	height: 100%;
+	width: 100%;
+}

@@ -64,6 +64,7 @@ function preloadHandlebarsTemplates() {
 		"systems/sinless/templates/partials/character-sheet-attributes.hbs",
 		"systems/sinless/templates/partials/character-sheet-skills.hbs",
 		"systems/sinless/templates/partials/character-sheet-skills2.hbs",
+		"systems/sinless/templates/partials/character-sheet-notes.hbs",
 		// "systems/sinless/templates/partials/template.hbs",
 	];
 

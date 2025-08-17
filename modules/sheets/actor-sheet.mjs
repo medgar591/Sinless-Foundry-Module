@@ -50,6 +50,15 @@ export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorS
 			effects: baseData.document.effects
 		}
 
+		context.enrichedNotes = await ux.TextEditor.enrichHTML(
+			this.actor.system.notes,
+			{
+				secrets: this.document.isOwner,
+				relativeTo: this.actor,
+			}
+			
+		);
+
 		this.sheetContext = context;
 		
 		return context;
@@ -59,8 +68,5 @@ export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorS
 	_onRender(context, options) {
 		const tabs = new ux.Tabs({navSelector: ".tabs", contentSelector: ".content", initial: "tab1"});
 		tabs.bind(this.element);
-
-		const tabs2 = new ux.Tabs({navSelector: ".tabs2", contentSelector: ".content2", initial: "tab2-1"});
-		tabs2.bind(this.element);
 	}
 }

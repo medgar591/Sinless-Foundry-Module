@@ -1,5 +1,5 @@
 import { clamp, sinRound } from "../utils.mjs";
-const { NumberField, SchemaField, StringField } = foundry.data.fields;
+const { NumberField, SchemaField, StringField, HTMLField } = foundry.data.fields;
 
 class ActorDataModel extends foundry.abstract.TypeDataModel {
 	static defineSchema() {
@@ -347,7 +347,8 @@ export class PlayerDataModel extends ActorDataModel {
 				max: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
 				value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
 			}),
-			ghost: new NumberField({required: false, integer: true, min: 0, initial: 7})
+			ghost: new NumberField({required: false, integer: true, min: 0, initial: 7}),
+			notes: new HTMLField()
 		}
 	}
 	
