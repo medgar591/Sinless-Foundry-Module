@@ -64,3 +64,7 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 	max-height: 100%;
 	max-width: calc(100% / 3);
 }
+
+.indent {
+	padding-left: 1rem;
+}
