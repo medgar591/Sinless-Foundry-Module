@@ -313,7 +313,8 @@ export class PlayerDataModel extends ActorDataModel {
 			kismet: new SchemaField({
 				max: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
 				value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
-			})
+			}),
+			ghost: new NumberField({required: false, integer: true, min: 0, initial: 7})
 		}
 	}
 	
