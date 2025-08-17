@@ -59,6 +59,8 @@ export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorS
 			
 		);
 
+		context.poolChoice = CONFIG.SINLESS.pools;
+
 		this.sheetContext = context;
 		
 		return context;

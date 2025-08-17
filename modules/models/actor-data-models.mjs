@@ -80,6 +80,7 @@ export class PlayerDataModel extends ActorDataModel {
 					value: new NumberField({ required: true, integer: true, min: 1, initial: 3 })
 				})
 			}),
+			charismaBonusChoice: new StringField({ requierd: true, blank: false }),
 			pools: new SchemaField({
 				brawn: new SchemaField({
 					max: new NumberField({ required: true, integer: true, min: 1, initial: 5 }),

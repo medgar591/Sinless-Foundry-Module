@@ -5,19 +5,19 @@ export const SINLESS = {};
  * @type{object}
  */
 SINLESS.attributes = {
-	strength: 'SINLESS.Attribute.Strength',
-	body: 'SINLESS.Attribute.Body',
-	reaction: 'SINLESS.Attribute.Reaction',
-	intelligence: 'SINLESS.Attribute.Intelligence',
-	willpower: 'SINLESS.Attribute.Willpower',
-	charisma: 'SINLESS.Attribute.Charisma',
+	strength: 'SINLESS.System.Attributes.Strength',
+	body: 'SINLESS.System.Attributes.Body',
+	reaction: 'SINLESS.System.Attributes.Reaction',
+	intelligence: 'SINLESS.System.Attributes.Intelligence',
+	willpower: 'SINLESS.System.Attributes.Willpower',
+	charisma: 'SINLESS.System.Attributes.Charisma',
 };
 
 SINLESS.pools = {
-	brawn: 'SINLESS.Pool.Brawn',
-	finesse: 'SINLESS.Pool.Finesse',
-	focus: 'SINLESS.Pool.Focus',
-	resolve: 'SINLESS.Pool.Resolve',
+	brawn: 'SINLESS.System.Brawn',
+	finesse: 'SINLESS.System.Finesse',
+	focus: 'SINLESS.System.Focus',
+	resolve: 'SINLESS.System.Resolve',
 };
 
 SINLESS.conditionTracks = {
