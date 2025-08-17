@@ -67,7 +67,16 @@
 				"energyWeapons": "Energy Weapons",
 				"firearms": "Firearms",
 				"gunnery": "Gunnery",
-				"heavyWeapons": "Heavy Weapons"
+				"heavyWeapons": "Heavy Weapons",
+				"astralSenses": "Astral Senses",
+				"channeling": "Channeling",
+				"coercion": "Coercion",
+				"conjuring": "Conjuring",
+				"fascination": "Fascination",
+				"leadership": "Leadership",
+				"sorcery": "Sorcery",
+				"subterfuge": "Subterfuge",
+				"survival": "Survival"
 			}
 		}
 	}

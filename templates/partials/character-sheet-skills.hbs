@@ -51,7 +51,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<h4>{{localize "SINLESS.System.Finesse"}}</h4>
 	<div class="skill flexrow">
 		<label class="skillLabel" for="system.skills.finesse.archery.value">{{localize "SINLESS.System.Skills.archery"}}</label>
@@ -104,6 +104,7 @@
 			</div>
 		</div>
 	</div>
+
 	<h4>Focus</h4>
 	{{#each system.skills.focus as |skill key|}}
 	<div class="skill flexrow">
@@ -115,14 +116,15 @@
 		</div>
 	</div>
 	{{/each}}
-	<h4>Resoluve</h4>
+
+	<h4>{{localize "SINLESS.System.Resolve"}}</h4>
 	{{#each system.skills.resolve as |skill key|}}
 	<div class="skill flexrow">
-		<label class="skillLabel" for="system.skills.resolve.{{key}}.value">{{key}}</label>
+		<label class="skillLabel" for="system.skills.resolve.{{key}}.value">{{localize (concat "SINLESS.System.Skills." key)}}</label>
 		<div class="flexrow">
-			<input class="input" type="number" name="system.skills.resolve.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<input class="input" type="number" name="system.skills.resolve.{{key}}.value" value="{{skill.value}}" data-dtype="Number">
 			<span class="center"> / </span>
-			<input class="input" type="number" name="system.skills.resolve.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+			<input class="input" type="number" name="system.skills.resolve.{{key}}.max" value="{{skill.max}}" data-dtype="Number">
 		</div>
 	</div>
 	{{/each}}
