@@ -3,7 +3,6 @@
 	{{#each system.attributes as |attribute key|}}
 	<div class="attribute flexrow">
 		<label class="attributeLabel" for="system.attributes.{{key}}.value">{{localize  (concat "SINLESS.System.Attributes." key) }}</label>
-		{{log key (key)}}
 		<div class="flexrow">
 			<input class="input" type="number" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number">
 			<span class="center"> / </span>
