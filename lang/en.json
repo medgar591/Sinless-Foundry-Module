@@ -22,7 +22,17 @@
 			"Finesse": "Finesse",
 			"Resolve": "Resolve",
 			"Focus": "Focus",
-			"Attributes": "Attributes",
+			"Attributes": {
+				"title": "Attributes",
+				"titlePrimary": "Primary Attributes",
+				"titleSecondary": "Secondary Attributes",
+				"strength": "Strength",
+				"body": "Body",
+				"reaction": "Reaction",
+				"intelligence": "Intelligence",
+				"willpower": "Willpower",
+				"charisma": "Charisma"
+			},
 			"ActiveSkills": "Active Skills",
 			"SecondarySkills": "Secondary Skills",
 			"Gear": "Gear",

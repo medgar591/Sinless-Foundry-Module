@@ -1,8 +1,9 @@
 <div class="flexcol">
-	<h4 class="center"> Primary Attributes </h4>
+	<h4 class="center">{{localize "SINLESS.System.Attributes.titlePrimary"}}</h4>
 	{{#each system.attributes as |attribute key|}}
 	<div class="attribute flexrow">
-		<label class="attributeLabel" for="system.attributes.{{key}}.value">{{key}}</label>
+		<label class="attributeLabel" for="system.attributes.{{key}}.value">{{localize  (concat "SINLESS.System.Attributes." key) }}</label>
+		{{log key (key)}}
 		<div class="flexrow">
 			<input class="input" type="number" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number">
 			<span class="center"> / </span>
@@ -10,7 +11,7 @@
 		</div>
 	</div>
 	{{/each}}
-	<h4 class="center"> Secondary Attributes </h4>
+	<h4 class="center">{{localize "SINLESS.System.Attributes.titleSecondary"}}</h4>
 	<div class="attribute flexrow">
 		<label class="attributeLabel">ZP</label>
 		<span>5 (5.8) / 6</span>

@@ -73,7 +73,12 @@ function preloadHandlebarsTemplates() {
 function registerHandlebarsHelpers() {
 	Handlebars.registerHelper("equals", function(v1, v2) {return (v1 === v2)});
 	Handlebars.registerHelper("contains", function(element, search) {return (element.includes(search))});
-	Handlebars.registerHelper("concat", function(s1, s2, s3 = "") {return (s1 + s2 + s3)});
+	Handlebars.registerHelper("concat", function(s1, s2, s3 = "") {
+		if (typeof s3 === "object" && s3 !== null) {
+    			s3 = "";
+  		}
+  		return s1 + s2 + s3;
+	});
 	Handlebars.registerHelper("isGreater", function(p1, p2) {return (p1 > p2)});
 	Handlebars.registerHelper("isGreaterOrEqual", function(p1, p2) {return (p1 >= p2)});
 	Handlebars.registerHelper("ifOr", function(conditinal1, conditional2) {return (conditinal1 || conditional2)});
