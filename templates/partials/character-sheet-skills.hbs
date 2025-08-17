@@ -1,5 +1,14 @@
 <div class="skillsBox flexcol">
-	<h4>Brawn</h4>
+	<h4>{{localize "SINLESS.System.Brawn"}}</h4>
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.brawn.athletics.value">{{localize "SINLESS.System.Skills.athletics"}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.brawn.athletics.value" value="{{system.skills.brawn.athletics.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.brawn.athletics.max" value="{{system.skills.brawn.athletics.max}}" data-dtype="Number">
+		</div>
+	</div>
+
 	{{#each system.skills.brawn as |skill key|}}
 	<div class="skill flexrow">
 		<label class="skillLabel" for="system.skills.brawn.{{key}}.value">{{key}}</label>

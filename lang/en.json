@@ -50,7 +50,12 @@
 				"full": "Body Index"
 			},
 			"Kismet": "Kismet",
-			"GhostRating": "Ghost Rating"
+			"GhostRating": "Ghost Rating",
+			"Skills": {
+				"meta": {
+				},
+				"athletics": "Athletics"
+			}
 		}
 	}
 }

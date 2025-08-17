@@ -303,6 +303,9 @@ export class PlayerDataModel extends ActorDataModel {
 						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
 						name: new StringField({ required: true, blank: true})
 					}),
+				}),
+				meta: new SchemaField({
+					// Kept so that we don't get bad references calculating these values
 				})
 			}),
 			zp: new SchemaField({
@@ -356,7 +359,37 @@ export class PlayerDataModel extends ActorDataModel {
 		// TODO
 
 		// Calculate Grouped Skills
-		// TODO
+		this.skills.meta.melee = Math.max(
+			this.skills.brawn.cyberneticCombat, 
+			this.skills.brawn.martialArts,
+			this.skills.brawn.meleeWeapons,
+			this.skills.brawn.throwingWeapons,
+			this.skills.brawn.unarmedCombat,
+			2
+		) - 2;
+		this.skills.meta.ranged = Math.max(
+			this.skills.finesse.energyWeapons,
+			this.skills.finesse.firearms,
+			this.skills.finesse.gunnery,
+			this.skills.finesse.heavyWeapons,
+			2
+		) - 2;
+		this.skills.meta.vehicles = Math.max(this.skills.focus.drive, this.skills.focus.fly, 2) - 2;
+		this.skills.meta.computers = Math.max(
+			this.skills.focus.hacking,
+			this.skills.focus.ewar,
+			this.skills.focus.safecracking,
+			2
+		) - 2;
+		this.skills.meta.engineering = Math.max(
+			this.skills.focus.engineeringAeronautics,
+			this.skills.focus.engineeringArmory,
+			this.skills.focus.engineeringElectronics,
+			this.skills.focus.engineeringIndustrial,
+			this.skills.focus.engineeringMechanical,
+			this.skills.focus.engineeringNautical,
+			2
+		) - 2;
 
 		// Calculating ZP
 		if (this.zp.base <= 0) this.zp.base=0; //Making sure the field has an explicit 0 always
