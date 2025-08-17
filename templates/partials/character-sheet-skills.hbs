@@ -51,17 +51,59 @@
 			</div>
 		</div>
 	</div>
-	<h4>Finesse</h4>
-	{{#each system.skills.finesse as |skill key|}}
+	
+	<h4>{{localize "SINLESS.System.Finesse"}}</h4>
 	<div class="skill flexrow">
-		<label class="skillLabel" for="system.skills.finesse.{{key}}.value">{{key}}</label>
+		<label class="skillLabel" for="system.skills.finesse.archery.value">{{localize "SINLESS.System.Skills.archery"}}</label>
 		<div class="flexrow">
-			<input class="input" type="number" name="system.skills.finesse.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<input class="input" type="number" name="system.skills.finesse.archery.value" value="{{system.skills.finesse.archery.value}}" data-dtype="Number">
 			<span class="center"> / </span>
-			<input class="input" type="number" name="system.skills.finesse.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+			<input class="input" type="number" name="system.skills.finesse.archery.max" value="{{system.skills.finesse.archery.max}}" data-dtype="Number">
 		</div>
 	</div>
-	{{/each}}
+	<div class="skill flexrow">
+		<label class="skillLabel" for="system.skills.finesse.articulatedManeuvers.value">{{localize "SINLESS.System.Skills.articulatedManeuvers"}}</label>
+		<div class="flexrow">
+			<input class="input" type="number" name="system.skills.finesse.articulatedManeuvers.value" value="{{system.skills.finesse.articulatedManeuvers.value}}" data-dtype="Number">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.skills.finesse.articulatedManeuvers.max" value="{{system.skills.finesse.articulatedManeuvers.max}}" data-dtype="Number">
+		</div>
+	</div>
+	<h6>{{localize "SINLESS.System.Skills.meta.ranged"}}: {{system.skills.meta.ranged}}</h6>
+	<div class="indent">
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.finesse.energyWeapons.value">{{localize "SINLESS.System.Skills.energyWeapons"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.finesse.energyWeapons.value" value="{{system.skills.finesse.energyWeapons.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.finesse.energyWeapons.max" value="{{system.skills.finesse.energyWeapons.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.finesse.firearms.value">{{localize "SINLESS.System.Skills.firearms"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.finesse.firearms.value" value="{{system.skills.finesse.firearms.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.finesse.firearms.max" value="{{system.skills.finesse.firearms.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.finesse.gunnery.value">{{localize "SINLESS.System.Skills.gunnery"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.finesse.gunnery.value" value="{{system.skills.finesse.gunnery.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.finesse.gunnery.max" value="{{system.skills.finesse.gunnery.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.finesse.heavyWeapons.value">{{localize "SINLESS.System.Skills.heavyWeapons"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.finesse.heavyWeapons.value" value="{{system.skills.finesse.heavyWeapons.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.finesse.heavyWeapons.max" value="{{system.skills.finesse.heavyWeapons.max}}" data-dtype="Number">
+			</div>
+		</div>
+	</div>
 	<h4>Focus</h4>
 	{{#each system.skills.focus as |skill key|}}
 	<div class="skill flexrow">

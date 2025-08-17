@@ -17,11 +17,11 @@ Currently a work in progress.
   - [ ] Charisma bonus for pools
   - [ ] Active Skills Page
     - [x] Logic for meta skills
-    - [ ] Brawn implementation
+    - [x] Brawn implementation
       - [x] Implement 1 skill
-      - [ ] Martial Arts
-      - [ ] Other skills
-    - [ ] Finess implementation
+      - [x] Martial Arts
+      - [x] Other skills
+    - [x] Finess implementation
     - [ ] Focus implementation
     - [ ] Resolve implementation
   - [ ] Secondary Skills Page

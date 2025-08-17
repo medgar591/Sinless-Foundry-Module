@@ -53,14 +53,21 @@
 			"GhostRating": "Ghost Rating",
 			"Skills": {
 				"meta": {
-					"melee": "Melee"
+					"melee": "Melee",
+					"ranged": "Ranged"
 				},
 				"athletics": "Athletics",
 				"cyberneticCombat": "Cybernetic Combat",
 				"martialArts": "Martial Arts",
 				"meleeWeapons": "Melee Weapons",
 				"throwingWeapons": "Throwing Weapons",
-				"unarmedCombat": "Unarmed Combat"
+				"unarmedCombat": "Unarmed Combat",
+				"archery": "Archery",
+				"articulatedManeuvers": "Articulated Maneuvers",
+				"energyWeapons": "Energy Weapons",
+				"firearms": "Firearms",
+				"gunnery": "Gunnery",
+				"heavyWeapons": "Heavy Weapons"
 			}
 		}
 	}
