@@ -8,17 +8,49 @@
 			<input class="input" type="number" name="system.skills.brawn.athletics.max" value="{{system.skills.brawn.athletics.max}}" data-dtype="Number">
 		</div>
 	</div>
-
-	{{#each system.skills.brawn as |skill key|}}
-	<div class="skill flexrow">
-		<label class="skillLabel" for="system.skills.brawn.{{key}}.value">{{key}}</label>
-		<div class="flexrow">
-			<input class="input" type="number" name="system.skills.brawn.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
-			<span class="center"> / </span>
-			<input class="input" type="number" name="system.skills.brawn.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+	<h5>{{localize "SINLESS.System.Skills.meta.melee"}}: {{system.skills.meta.melee}}</h5>
+	<div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.brawn..value">{{localize "SINLESS.System.Skills.cyberneticCombat"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.brawn.cyberneticCombat.value" value="{{system.skills.brawn.cyberneticCombat.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.brawn.cyberneticCombat.max" value="{{system.skills.brawn.cyberneticCombat.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.brawn..value">{{localize "SINLESS.System.Skills.martialArts"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.brawn.martialArts.value" value="{{system.skills.brawn.martialArts.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.brawn.martialArts.max" value="{{system.skills.brawn.martialArts.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.brawn..value">{{localize "SINLESS.System.Skills.meleeWeapons"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.brawn.meleeWeapons.value" value="{{system.skills.brawn.meleeWeapons.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.brawn.meleeWeapons.max" value="{{system.skills.brawn.meleeWeapons.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.brawn..value">{{localize "SINLESS.System.Skills.throwingWeapons"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.brawn.throwingWeapons.value" value="{{system.skills.brawn.throwingWeapons.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.brawn.throwingWeapons.max" value="{{system.skills.brawn.throwingWeapons.max}}" data-dtype="Number">
+			</div>
+		</div>
+		<div class="skill flexrow">
+			<label class="skillLabel" for="system.skills.brawn..value">{{localize "SINLESS.System.Skills.unarmedCombat"}}</label>
+			<div class="flexrow">
+				<input class="input" type="number" name="system.skills.brawn.unarmedCombat.value" value="{{system.skills.brawn.unarmedCombat.value}}" data-dtype="Number">
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.skills.brawn.unarmedCombat.max" value="{{system.skills.brawn.unarmedCombat.max}}" data-dtype="Number">
+			</div>
 		</div>
 	</div>
-	{{/each}}
 	<h4>Finesse</h4>
 	{{#each system.skills.finesse as |skill key|}}
 	<div class="skill flexrow">

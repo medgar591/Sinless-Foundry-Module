@@ -360,34 +360,34 @@ export class PlayerDataModel extends ActorDataModel {
 
 		// Calculate Grouped Skills
 		this.skills.meta.melee = Math.max(
-			this.skills.brawn.cyberneticCombat, 
-			this.skills.brawn.martialArts,
-			this.skills.brawn.meleeWeapons,
-			this.skills.brawn.throwingWeapons,
-			this.skills.brawn.unarmedCombat,
+			this.skills.brawn.cyberneticCombat.value, 
+			this.skills.brawn.martialArts.value,
+			this.skills.brawn.meleeWeapons.value,
+			this.skills.brawn.throwingWeapons.value,
+			this.skills.brawn.unarmedCombat.value,
 			2
 		) - 2;
 		this.skills.meta.ranged = Math.max(
-			this.skills.finesse.energyWeapons,
-			this.skills.finesse.firearms,
-			this.skills.finesse.gunnery,
-			this.skills.finesse.heavyWeapons,
+			this.skills.finesse.energyWeapons.value,
+			this.skills.finesse.firearms.value,
+			this.skills.finesse.gunnery.value,
+			this.skills.finesse.heavyWeapons.value,
 			2
 		) - 2;
-		this.skills.meta.vehicles = Math.max(this.skills.focus.drive, this.skills.focus.fly, 2) - 2;
+		this.skills.meta.vehicles = Math.max(this.skills.focus.drive.value, this.skills.focus.fly.value, 2) - 2;
 		this.skills.meta.computers = Math.max(
-			this.skills.focus.hacking,
-			this.skills.focus.ewar,
-			this.skills.focus.safecracking,
+			this.skills.focus.hacking.value,
+			this.skills.focus.ewar.value,
+			this.skills.focus.safecracking.value,
 			2
 		) - 2;
 		this.skills.meta.engineering = Math.max(
-			this.skills.focus.engineeringAeronautics,
-			this.skills.focus.engineeringArmory,
-			this.skills.focus.engineeringElectronics,
-			this.skills.focus.engineeringIndustrial,
-			this.skills.focus.engineeringMechanical,
-			this.skills.focus.engineeringNautical,
+			this.skills.focus.engineeringAeronautics.value,
+			this.skills.focus.engineeringArmory.value,
+			this.skills.focus.engineeringElectronics.value,
+			this.skills.focus.engineeringIndustrial.value,
+			this.skills.focus.engineeringMechanical.value,
+			this.skills.focus.engineeringNautical.value,
 			2
 		) - 2;
 
