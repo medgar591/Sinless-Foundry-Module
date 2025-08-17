@@ -1,4 +1,4 @@
-<div class="skillsBox flexcol">
+<div class="skillsBox2 flexcol">
 	<h4 style="margin-top: 1rem;">{{localize "SINLESS.System.Skills.ettiquettes"}}</h4>
 	{{#each system.skills.ettiquettes as |skill key|}}
 	<div class="skill flexrow">
@@ -13,7 +13,7 @@
 	<h4>{{localize "SINLESS.System.Skills.knowledge"}}</h4>
 	{{#each system.skills.knowledge as |skill key|}}
 	<div class="skill flexrow">
-		<input class="inputText" type="text" name="system.skills.knowledge.{{key}}.name" value="{{skill.name}}" placeholder="{{localize "SINLESS.System.Skills.knowledge"}}" >
+		<input class="inputText" type="text" name="system.skills.knowledge.{{key}}.name" value="{{skill.name}}" placeholder="{{localize "SINLESS.System.Skills.knowledge"}}">
 		<div class="flexrow">
 			<input class="input" type="number" name="system.skills.knowledge.{{key}}.value" value="{{skill.value}}" data-dtype="Number">
 			<span class="center"> / </span>
@@ -21,14 +21,14 @@
 		</div>
 	</div>
 	{{/each}}
-	<h4>Rituals</h4>
+	<h4>{{localize "SINLESS.System.Skills.rituals"}}</h4>
 	{{#each system.skills.rituals as |skill key|}}
 	<div class="skill flexrow">
-		<label class="skillLabel" for="system.skills.rituals.{{key}}.value">{{key}}</label>
+		<input class="inputText" type="text" name="system.skills.rituals.{{key}}.name" value="{{skill.name}}" placeholder="{{localize "SINLESS.System.Skills.rituals"}}">
 		<div class="flexrow">
-			<input class="input" type="number" name="system.skills.rituals.{{skill}}.value" value="{{skill.value}}" data-dtype="Number">
+			<input class="input" type="number" name="system.skills.rituals.{{key}}.value" value="{{skill.value}}" data-dtype="Number">
 			<span class="center"> / </span>
-			<input class="input" type="number" name="system.skills.rituals.{{skill}}.max" value="{{skill.max}}" data-dtype="Number">
+			<input class="input" type="number" name="system.skills.rituals.{{key}}.max" value="{{skill.max}}" data-dtype="Number">
 		</div>
 	</div>
 	{{/each}}
