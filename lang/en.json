@@ -48,7 +48,8 @@
 			"BI": {
 				"short": "BI",
 				"full": "Body Index"
-			}
+			},
+			"Kismet": "Kismet"
 		}
 	}
 }

@@ -310,6 +310,10 @@ export class PlayerDataModel extends ActorDataModel {
 				base: new NumberField({ required: true, integer: true, initial: 6})
 			}),
 			bi: new NumberField({required: false, integer: true, min: 0, initial: 0}),
+			kismet: new SchemaField({
+				max: new NumberField({ required: true, integer: true, min: 0, initial: 0 }),
+				value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+			})
 		}
 	}
 	
@@ -359,5 +363,8 @@ export class PlayerDataModel extends ActorDataModel {
 		this.zp.exact = Math.floor(this.zp.exact * 100) / 100
 		this.zp.exact = Math.min(this.zp.base, this.zp.exact);
 		this.zp.value = Math.max(0, sinRound(this.zp.exact));
+
+		// Clamp Kismet
+		this.kismet.value = clamp(this.kismet.value, 0, this.kismet.max);
 	}
 }
