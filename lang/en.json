@@ -44,6 +44,10 @@
 			"ZP": {
 				"short": "ZP",
 				"full": "Zoetic Potential"
+			},
+			"BI": {
+				"short": "BI",
+				"full": "Body Index"
 			}
 		}
 	}

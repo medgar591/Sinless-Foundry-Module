@@ -309,6 +309,7 @@ export class PlayerDataModel extends ActorDataModel {
 				exact: new NumberField({ required: true, integer: false, initial: 6}),
 				base: new NumberField({ required: true, integer: true, initial: 6})
 			}),
+			bi: new NumberField({required: false, integer: true, min: 0, initial: 0}),
 		}
 	}
 	
