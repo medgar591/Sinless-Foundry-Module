@@ -260,6 +260,36 @@ export class PlayerDataModel extends ActorDataModel {
 						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
 					})
 				}),
+				ettiquettes: new SchemaField({
+					aristocratic: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					civic: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					corporate: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					criminal: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					street: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					military: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					}),
+					wasteland: new SchemaField({
+						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
+						value: new NumberField({ required: true, integer: true, min: 0, initial: 0 })
+					})
+				}),
 				knowledge: new SchemaField({
 					knowledge1: new SchemaField({
 						max: new NumberField({ required: true, integer: true, min: 0, initial: 6 }),
@@ -354,6 +384,7 @@ export class PlayerDataModel extends ActorDataModel {
 		Object.values(this.skills.finesse).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 		Object.values(this.skills.focus).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 		Object.values(this.skills.resolve).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
+		Object.values(this.skills.ettiquettes).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 		Object.values(this.skills.knowledge).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 		Object.values(this.skills.rituals).forEach(skill => {skill.value = clamp(skill.value, 0, skill.max);});
 

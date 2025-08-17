@@ -52,6 +52,16 @@
 			"Kismet": "Kismet",
 			"GhostRating": "Ghost Rating",
 			"Skills": {
+				"ettiquettes": "Ettiquettes",
+				"aristocratic": "Aristocratic",
+				"civic": "Civic",
+				"corporate": "Corporate",
+				"criminal": "Criminal",
+				"military": "Military",
+				"street": "Street",
+				"wasteland": "Wasteland",
+				"knowledge": "Knowledge",
+				"rituals": "Rituals",
 				"meta": {
 					"melee": "Melee",
 					"ranged": "Ranged",

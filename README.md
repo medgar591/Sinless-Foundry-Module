@@ -25,8 +25,7 @@ Currently a work in progress.
     - [x] Focus implementation
     - [x] Resolve implementation
   - [ ] Secondary Skills Page
-    - [ ] Ettiquettes
+    - [x] Ettiquettes
     - [ ] Knowledge Skills
     - [ ] Rituals
-  - [ ] Gear Page
   - [ ] Notes Page
