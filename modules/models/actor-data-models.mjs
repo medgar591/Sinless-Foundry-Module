@@ -25,6 +25,11 @@ class ActorDataModel extends foundry.abstract.TypeDataModel {
 	/** @inheritDoc */
 	prepareDerivedData() {
 		super.prepareDerivedData();
+
+		// Clamp condition tracks
+		this.condition.phys.value = clamp(this.condition.phys.value, 0, this.condition.phys.max);
+		this.condition.stun.value = clamp(this.condition.stun.value, 0, this.condition.stun.max);
+		this.condition.penalty = -1 * (Math.floor(this.condition.phys.value / 3) + Math.floor(this.condition.stun.value / 3))
 	}
 }
 
@@ -309,13 +314,7 @@ export class PlayerDataModel extends ActorDataModel {
 	
 	/** @inheritDoc */
 	prepareDerivedData() {
-		super.prepareDerivedData();
-
-		// Clamp Skills
-		// TODO
-
-		// Calculate Grouped Skills
-
+		// These must be done before calling super so that we correctly clamp condition tracks
 		// Clamp attributes
 		this.attributes.strength.value = clamp(this.attributes.strength.value, 1, this.attributes.strength.max);
 		this.attributes.body.value = clamp(this.attributes.body.value, 1, this.attributes.body.max);
@@ -324,21 +323,18 @@ export class PlayerDataModel extends ActorDataModel {
 		this.attributes.willpower.value = clamp(this.attributes.willpower.value, 1, this.attributes.willpower.max);
 		this.attributes.charisma.value = clamp(this.attributes.charisma.value, 1, this.attributes.charisma.max);
 
+		// Calculate Track Max
+		this.condition.phys.max = 6 + Math.floor(this.attributes.body.value / 2);
+		this.condition.stun.max = 6 + Math.floor(this.attributes.willpower.value / 2);
+
+		super.prepareDerivedData();
+
 		// Calculate Pool Max
 		this.pools.brawn.max = Math.floor(this.attributes.strength.value + (this.attributes.body.value / 2) + (this.attributes.willpower.value / 4));
 		this.pools.finesse.max = Math.floor(this.attributes.reaction.value + (this.attributes.body.value / 2) + (this.attributes.intelligence.value / 4));
 		this.pools.focus.max = Math.floor(this.attributes.intelligence.value + (this.attributes.reaction.value / 2) + (this.attributes.willpower.value / 4));
 		this.pools.resolve.max = Math.floor(this.attributes.willpower.value + (this.attributes.charisma.value / 2) + (this.attributes.intelligence.value / 2));
 		// TODO: Charisma bonus
-
-		// Calculate Track Max
-		this.condition.phys.max = 6 + Math.floor(this.attributes.body.value / 2);
-		this.condition.stun.max = 6 + Math.floor(this.attributes.willpower.value / 2);
-
-		// Clamp condition tracks
-		this.condition.phys.value = clamp(this.condition.phys.value, 0, this.condition.phys.max);
-		this.condition.stun.value = clamp(this.condition.stun.value, 0, this.condition.stun.max);
-		this.condition.penalty = -1 * (Math.floor(this.condition.phys.value / 3) + Math.floor(this.condition.stun.value / 3))
 
 		// Clamp Pools
 		this.pools.brawn.value = clamp(this.pools.brawn.value, 0, this.pools.brawn.max);
@@ -349,5 +345,11 @@ export class PlayerDataModel extends ActorDataModel {
 		// Calculate Armor
 		this.armor.ballistic = this.armorDetail.internal.ballistic + this.armorDetail.under.ballistic + this.armorDetail.outer.ballistic;
 		this.armor.impact = this.armorDetail.internal.impact + this.armorDetail.under.impact + this.armorDetail.outer.impact;
+
+		// Clamp Skills
+		// TODO
+
+		// Calculate Grouped Skills
+		// TODO
 	}
 }
