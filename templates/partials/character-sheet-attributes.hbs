@@ -12,8 +12,13 @@
 	{{/each}}
 	<h4 class="center">{{localize "SINLESS.System.Attributes.titleSecondary"}}</h4>
 	<div class="attribute flexrow">
-		<label class="attributeLabel">ZP</label>
-		<span>5 (5.8) / 6</span>
+		<label class="attributeLabel">{{localize "SINLESS.System.ZP.full"}}</label>
+		<div class="flexrow">
+			{{system.zp.value}} (
+			<input class="input" type="number" name="system.zp.exact" value="{{system.zp.exact}}" data-dtype="Number" step="0.01">
+			) / 
+			<input class="input" type="number" name="system.zp.base" value="{{system.zp.base}}" data-dtype="Number">
+		</div>
 	</div>
 	<div class="attribute flexrow">
 		<label class="attributeLabel">Body Index</label>

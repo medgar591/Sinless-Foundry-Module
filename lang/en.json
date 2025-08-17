@@ -40,7 +40,11 @@
 			"Rigger": "Rigger",
 			"Decker": "Decker",
 			"Mage": "Mage",
-			"Shaman": "Shaman"
+			"Shaman": "Shaman",
+			"ZP": {
+				"short": "ZP",
+				"full": "Zoetic Potential"
+			}
 		}
 	}
 }

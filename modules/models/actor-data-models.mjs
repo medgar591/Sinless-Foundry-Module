@@ -1,4 +1,4 @@
-import { clamp } from "../utils.mjs";
+import { clamp, sinRound } from "../utils.mjs";
 const { NumberField, SchemaField, StringField } = foundry.data.fields;
 
 class ActorDataModel extends foundry.abstract.TypeDataModel {
@@ -351,5 +351,11 @@ export class PlayerDataModel extends ActorDataModel {
 
 		// Calculate Grouped Skills
 		// TODO
+
+		// Calculating ZP
+		// TODO: Modify exact based on gear and cyberware
+		this.zp.exact = Math.floor(this.zp.exact * 100) / 100
+		this.zp.exact = Math.min(this.zp.base, this.zp.exact);
+		this.zp.value = Math.max(0, sinRound(this.zp.exact));
 	}
 }
