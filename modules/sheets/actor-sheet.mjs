@@ -77,8 +77,8 @@ export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorS
 		return context;
 	}
 
-	async _onFirstRender(context, options) {
-		await super._onFirstRender(context, options);
+	async _onRender(context, options) {
+		await super._onRender(context, options);
 		super.changeTab(this.tabGroups["primary"], "primary", {force: true});
 	}
 }
