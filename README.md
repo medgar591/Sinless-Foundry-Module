@@ -10,6 +10,7 @@ Currently a work in progress.
 	- Actual issue was binding my tabs in onRender. Moved over to onFirstRender instead.
 	- Nope, wrong approach entirely. Try this: https://foundryvtt.wiki/en/development/guides/Tabs-and-Templates/Tabs-in-AppV2
 	- Why do I have to manually change tab to the active tab in first render?
+	- Turns out based on my implementation (tabs internal not as PARTS), tab.cssClass wasn't populating on initialization. Now I use tabs.<tabname>.cssClass
 - [x] You can't change the picture anymore?
 - [ ] Setting a pool value to something like -10 sometimes doesn't submit when hitting enter, leaving the value until something else updates
 

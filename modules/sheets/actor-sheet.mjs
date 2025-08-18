@@ -25,7 +25,7 @@ export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorS
 
 	static PARTS = {
 		header: { template: "systems/sinless/templates/sheets/header.hbs" },
-		body: { template: "systems/sinless/templates/sheets/body.hbs" }
+		body: { template: "systems/sinless/templates/sheets/body.hbs" },
 	};
 
 	static TABS = {
@@ -75,10 +75,5 @@ export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorS
 		this.sheetContext = context;
 
 		return context;
-	}
-
-	async _onRender(context, options) {
-		await super._onRender(context, options);
-		super.changeTab(this.tabGroups["primary"], "primary", {force: true});
 	}
 }
