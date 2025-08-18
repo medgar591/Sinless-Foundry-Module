@@ -1,5 +1,5 @@
 <div class="headerBox flexrow">
-	<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" style="max-width: fit-content;"/>
+	<img class="profile-img" src="{{actor.img}}" {{#if isEditable}} data-edit="img" data-action="editImage" {{/if}} title="{{actor.name}}" height="100" width="100"/>
 	<div class="basicFieldsBox flexcol">
 		<input class="characterName bigInputText" type="text" name="name" value="{{actor.name}}">
 		<input class="characterFullName inputText" type="text" name="system.fullName" value="{{system.fullName}}" placeholder="{{localize "SINLESS.System.FullName"}}">

@@ -83,3 +83,12 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 .tab .input {
 	height: 1.75rem;
 }
+
+.profile-img {
+	max-width: fit-content;
+	cursor: pointer;
+}
+
+.profile-img:hover {
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
