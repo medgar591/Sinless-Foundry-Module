@@ -67,7 +67,7 @@ export class CharacterSheet extends api.HandlebarsApplicationMixin(sheets.ActorS
 	}
 
 	/** @override */
-	_onRender(context, options) {
+	_onFirstRender(context, options) {
 		const tabs = new ux.Tabs({navSelector: ".tabs", contentSelector: ".content", initial: "tab1"});
 		tabs.bind(this.element);
 	}

@@ -4,10 +4,11 @@ Currently a work in progress.
 
 ## Known Bugs
 
-- [ ] Modifying anything on another tab redirects you to the 1st tab on save
+- [x] Modifying anything on another tab redirects you to the 1st tab on save
 	- Check out Universal Tabletop System & Torg Eternity for examples using ApplicationV2 with tabs
 	- Definitely double check how I handle onRender for actor-sheet.mjs
-- [ ] You can't change the picture anymore?
+	- Actual issue was binding my tabs in onRender. Moved over to onFirstRender instead.
+- [x] You can't change the picture anymore?
 - [ ] Setting a pool value to something like -10 sometimes doesn't submit when hitting enter, leaving the value until something else updates
 
 ## Requested Enhancements
