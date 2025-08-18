@@ -11,49 +11,49 @@
 			{{/each}}
 		</div>
 		<div class="menuBox">
-			<nav class="tabs vertical" data-group="primary-tabs">
+			<nav class="tabs vertical" data-group="primary">
 				<div class="menuBar">
-					<a class="item" data-tab="tab1" data-group="primary-tabs">
+					<a class="item" data-action="tab" data-tab="attributes" data-group="primary">
 						{{localize "SINLESS.System.Attributes.title"}}
 					</a>
 				</div>
 				<div class="menuBar">
-					<a class="item" data-tab="tab2" data-group="primary-tabs">
+					<a class="item" data-action="tab" data-tab="activeSkills" data-group="primary">
 						{{localize "SINLESS.System.ActiveSkills"}}
 					</a>
 				</div>
 				<div class="menuBar">
-					<a class="item" data-tab="tab3" data-group="primary-tabs">
+					<a class="item" data-action="tab" data-tab="secondarySkills" data-group="primary">
 						{{localize "SINLESS.System.SecondarySkills"}}
 					</a>
 				</div>
 				<div class="menuBar">
-					<a class="item disabled" data-tab="tab4" data-group="primary-tabs">
+					<a class="item disabled" data-action="tab" data-tab="tab4" data-group="primary">
 						{{localize "SINLESS.System.Gear"}} (WIP)
 					</a>
 				</div>
 				<div class="menuBar">
-					<a class="item" data-tab="tab5" data-group="primary-tabs">
+					<a class="item" data-action="tab" data-tab="notes" data-group="primary">
 						{{localize "SINLESS.System.Notes"}}
 					</a>
 				</div>
 				<div class="menuBar">
-					<a class="item disabled" data-tab="tab6" data-group="primary-tabs">
+					<a class="item disabled" data-action="tab" data-tab="tab6" data-group="primary">
 						{{localize "SINLESS.System.Rigger"}} (WIP)
 					</a>
 				</div>
 				<div class="menuBar">
-					<a class="item disabled" data-tab="tab7" data-group="primary-tabs">
+					<a class="item disabled" data-action="tab" data-tab="tab7" data-group="primary">
 						{{localize "SINLESS.System.Decker"}} (WIP)
 					</a>
 				</div>
 				<div class="menuBar">
-					<a class="item disabled" data-tab="tab8" data-group="primary-tabs">
+					<a class="item disabled" data-action="tab" data-tab="tab8" data-group="primary">
 						{{localize "SINLESS.System.Mage"}} (WIP)
 					</a>
 				</div>
 				<div class="menuBar">
-					<a class="item disabled" data-tab="tab9" data-group="primary-tabs">
+					<a class="item disabled" data-action="tab" data-tab="tab9" data-group="primary">
 						{{localize "SINLESS.System.Shaman"}} (WIP)
 					</a>
 				</div>
@@ -62,17 +62,9 @@
 		
 	</div>
 	<section class="content">
-		<div class="tab" data-tab="tab1" data-group="primary-tabs">
-			{{> "systems/sinless/templates/partials/character-sheet-attributes.hbs"}}
-		</div>
-		<div class="tab" data-tab="tab2" data-group="primary-tabs">
-			{{> "systems/sinless/templates/partials/character-sheet-skills.hbs"}}
-		</div>
-		<div class="tab" data-tab="tab3" data-group="primary-tabs">
-			{{> "systems/sinless/templates/partials/character-sheet-skills2.hbs"}}
-		</div>
-		<div class="tab" data-tab="tab5" data-group="primary-tabs">
-			{{> "systems/sinless/templates/partials/character-sheet-notes.hbs"}}
-		</div>
+		{{> "systems/sinless/templates/partials/character-sheet-attributes.hbs"}}
+		{{> "systems/sinless/templates/partials/character-sheet-skills.hbs"}}
+		{{> "systems/sinless/templates/partials/character-sheet-skills2.hbs"}}
+		{{> "systems/sinless/templates/partials/character-sheet-notes.hbs"}}
 	</section>
 </div>

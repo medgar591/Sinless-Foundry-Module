@@ -8,6 +8,8 @@ Currently a work in progress.
 	- Check out Universal Tabletop System & Torg Eternity for examples using ApplicationV2 with tabs
 	- Definitely double check how I handle onRender for actor-sheet.mjs
 	- Actual issue was binding my tabs in onRender. Moved over to onFirstRender instead.
+	- Nope, wrong approach entirely. Try this: https://foundryvtt.wiki/en/development/guides/Tabs-and-Templates/Tabs-in-AppV2
+	- Why do I have to manually change tab to the active tab in first render?
 - [x] You can't change the picture anymore?
 - [ ] Setting a pool value to something like -10 sometimes doesn't submit when hitting enter, leaving the value until something else updates
 

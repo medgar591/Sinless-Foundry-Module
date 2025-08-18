@@ -1,4 +1,4 @@
-<div class="flexcol">
+<section class="flexcol tab {{tab.cssClass}}" data-group="primary" data-tab="attributes">
 	<h4 class="center">{{localize "SINLESS.System.Attributes.titlePrimary"}}</h4>
 	{{#each system.attributes as |attribute key|}}
 	<div class="attribute flexrow">
@@ -68,4 +68,4 @@
 		<input class="input" type="number" name="system.armorDetail.outer.ballistic" value="{{system.armorDetail.outer.ballistic}}" data-dtype="Number" placeholder="0">
 		<input class="input" type="number" name="system.armorDetail.outer.impact" value="{{system.armorDetail.outer.impact}}" data-dtype="Number" placeholder="0">
 	</div>
-</div>
+</section>
