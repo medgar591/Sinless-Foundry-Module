@@ -17,6 +17,13 @@ Currently a work in progress.
 ## Requested Enhancements
 
 - [ ] Review the work to convert over to using formGroup and formInput for all the fields
+- [ ] Magical talent field
+- [ ] Lifestyle tracking
+- [ ] Simplified list form of skills?
+- [ ] Skill specialization...
+- [ ] Heritage traits so much
+- [ ] Gear tracking pls
+- [ ] Cyberware too
 
 ## Future Vision
 - [x] PC Sheet MVP
@@ -37,3 +44,10 @@ Currently a work in progress.
     - [x] Knowledge Skills
     - [x] Rituals
   - [x] Notes Page
+  - [ ] Inventory
+    - [ ] Drag & Drop functionality
+    - [ ] Divide into the various item types:
+      - [ ] Spells
+      - [ ] Heritage traits
+      - [ ] Cybertechtronics
+      - [ ] Gear
