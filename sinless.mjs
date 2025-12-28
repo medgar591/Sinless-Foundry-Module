@@ -10,9 +10,9 @@ import { CharacterSheet } from "./modules/sheets/actor-sheet.mjs";
 // Helpers and utilities
 import { SINLESS } from "./modules/config.mjs";
 
-/* -------------------------------------------- */
+/************************************************/
 /*  Init Hook                                   */
-/* -------------------------------------------- */
+/************************************************/
 Hooks.once('init', async () => {
 
 	console.log("SINLESS | Initializing Sinless Core System");
@@ -43,9 +43,9 @@ Hooks.once('init', async () => {
 	registerHandlebarsHelpers();
 });
 
-/* -------------------------------------------- */
+/************************************************/
 /*  Ready Hook                                  */
-/* -------------------------------------------- */
+/************************************************/
 Hooks.once('ready', async () => {
 
 	// Completed initialization, release lock
@@ -55,9 +55,9 @@ Hooks.once('ready', async () => {
 	if(!game.user.isGM) return;
 });
 
-/* -------------------------------------------- */
+/************************************************/
 /*  Private Functions                           */
-/* -------------------------------------------- */
+/************************************************/
 function preloadHandlebarsTemplates() {
 	
 	const templatePaths = [
