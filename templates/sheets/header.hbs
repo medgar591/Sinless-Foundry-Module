@@ -1,45 +1,39 @@
-<div class="headerBox flexrow">
-	<img class="profile-img" src="{{actor.img}}" {{#if isEditable}} data-edit="img" data-action="editImage" {{/if}} title="{{actor.name}}" height="100" width="100"/>
-	<div class="basicFieldsBox flexcol">
+<header class="headerBox">
+	<img class="profile-img" src="{{actor.img}}" {{#if isEditable}} data-edit="img" data-action="editImage" {{/if}} title="{{actor.name}}"/>
+	<div class="basicFieldsBox">
 		<input class="characterName bigInputText" type="text" name="name" value="{{actor.name}}">
 		<input class="characterFullName inputText" type="text" name="system.fullName" value="{{system.fullName}}" placeholder="{{localize "SINLESS.System.FullName"}}">
 		<input class="heritage inputText" type="text" name="system.heritage" value="{{system.heritage}}" placeholder="{{localize "SINLESS.System.Heritage"}}">
 		<input class="movement inputText" type="text" name="system.movement" value="{{system.movement}}" placeholder="{{localize "SINLESS.System.Movement"}}">
 	</div>
-	<div class="statusBox flexrow">
-		<div class="conditionBox flexcol" style="align-items: center;">
-			<div class="conditionPhysLabel flex-center">{{localize "SINLESS.System.Physical"}}</div>
-			<div class="conditionPhysEntryBox flexrow">
-				<input class="conditionPhysValue input" type="number" name="system.condition.phys.value" value="{{system.condition.phys.value}}">
-				<div class="conditionPhysDivider center"> / </div>
-				<input class="conditionPhysMax input" type="number" name="system.condition.phys.max" value="{{system.condition.phys.max}}" disabled>
-			</div>
-			<div class="conditionStunLabel">{{localize "SINLESS.System.Stun"}}</div>
-			<div class="conditionStunEntryBox flexrow">
-				<input class="conditionStunValue input" type="number" name="system.condition.stun.value" value="{{system.condition.stun.value}}">
-				<div class="conditionStunDivider center"> / </div>
-				<input class="conditionStunMax input" type="number" name="system.condition.stun.max" value="{{system.condition.stun.max}}" disabled>
-			</div>
+	<dl class="statusBox flexcol center">
+		<dt><label for="phys-value">{{localize "SINLESS.System.Physical"}}</label></dt>
+		<dd class="flexrow">
+			<input class="input" id="phys-value" type="number" name="system.condition.phys.value" value="{{system.condition.phys.value}}">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.condition.phys.max" value="{{system.condition.phys.max}}" readonly>
+		</dd>
+		<dt><label for="stun-value">{{localize "SINLESS.System.Stun"}}</label></dt>
+		<dd class="flexrow">
+			<input class="input" id="stun-value" type="number" name="system.condition.stun.value" value="{{system.condition.stun.value}}">
+			<span class="center"> / </span>
+			<input class="input" type="number" name="system.condition.stun.max" value="{{system.condition.stun.max}}" readonly>
+		</dd>
+	</dl>
+	<dl class="extraInfoBox flexCol center">
+		<div class="derivedDamageBox">
+			<dt><label for="damageOver-value">{{localize "SINLESS.System.Over"}}</label></dt>
+			<dt><label for="damagePenalty-value">{{localize "SINLESS.System.ConditionPenalty"}}</label></dt>
+			<dd><input class="input" id="damageOver-value" type="number" name="system.damageOverflow" value="{{system.damageOverflow}}" ></dd>
+			<dd><input class="damagePenaltyValue input" type="number" value="{{system.condition.penalty}}" readonly></dd>
 		</div>
-	</div>
-	<div class="extraInfoBox flexcol">
-		<div class="derivedDamageBox flexrow">
-			<div class="damageOverBox flexcol" style="align-items: center;">
-				<div class="damageOverLabel">{{localize "SINLESS.System.Over"}}</div>
-				<input class="damageOverValue input" type="number" name="system.damageOverflow" value="{{system.damageOverflow}}" >
-			</div>
-			<div class="damagePenaltyBox flexcol" style="align-items: center;">
-				<div class="damagePenaltybel">{{localize "SINLESS.System.ConditionPenalty"}}</div>
-				<input class="damagePenaltyValue input" type="number" value="{{system.condition.penalty}}" disabled>
-			</div>
+		<div class="armorBox">
+			<dt><label>{{localize "SINLESS.System.Armor.B/I"}}</label></dt>
+			<dd class="flexrow">
+				<input class="input" type="number"name="system.armor.ballistic" value="{{system.armor.ballistic}}" readonly>
+				<span class="center"> / </span>
+				<input class="input" type="number" name="system.armor.impact" value="{{system.armor.impact}}" readonly>
+			</dd>
 		</div>
-		<div class="armorBox flexcol" style="align-items: center;">
-			<div class="armorLabel">{{localize "SINLESS.System.Armor.B/I"}}</div>
-			<div class="armorEntryBox flexrow">
-				<input class="armorBallisticValue input" type="number"name="system.armor.ballistic" value="{{system.armor.ballistic}}" disabled>
-				<div class="armorDivider center"> / </div>
-				<input class="armorImpactValue input" type="number" name="system.armor.impact" value="{{system.armor.impact}}" disabled>
-			</div>
-		</div>
-	</div>
-</div>
+	</dl>
+</header>

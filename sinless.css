@@ -1,3 +1,49 @@
+/* Header Styles */
+
+.headerBox {
+	display: grid;
+	grid-template-columns: 100px 3fr 2fr 2fr;
+	grid-template-areas: "picture basic status extras";
+	gap: 1rem;
+	align-items: start;
+}
+
+.profile-img {
+	grid-area: picture;
+	height: 100px;
+	width: 100px;
+	max-width: fit-content;
+	cursor: pointer;
+	align-self: center;
+}
+
+.profile-img:hover {
+	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.basicFieldsBox {
+	grid-area: basic;
+}
+
+.statusBox {
+	grid-area: status;
+}
+
+.extraInfoBox {
+	grid-area: extras
+}
+
+.statusBox dd, 
+.extraInfoBox dd {
+	margin-left: 0;
+}
+
+.derivedDamageBox {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 2rem;
+}
+
 /* Body (Sidebar + Content) Styling */
 
 .body {
@@ -74,14 +120,7 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 	height: 1.75rem;
 }
 
-.profile-img {
-	max-width: fit-content;
-	cursor: pointer;
-}
 
-.profile-img:hover {
-	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
 
 .noBorder {
 	border-style: none;
