@@ -1,6 +1,6 @@
-<div class="body flexrow">
-	<div class="sidebar flexcol">
-		<fieldset class="poolsBox noBorder"> <legend>{{localize "SINLESS.System.Pools"}}</legend>
+<div class="body">
+	<div class="sidebar">
+		<fieldset class="noPadding noBorder"> <legend>{{localize "SINLESS.System.Pools"}}</legend>
 			<dl class="statList">
 				{{#each system.pools as |pool key|}}
 				<dt><label for="{{key}}-value">{{localize (concat "SINLESS.System." key)}}</label></dt>
@@ -12,56 +12,35 @@
 				{{/each}}
 			</dl>
 		</fieldset>
-		<div class="menuBox">
-			<nav class="tabs vertical" data-group="primary">
-				<div class="menuBar">
-					<a class="item {{tabs.attributes.cssClass}}" data-action="tab" data-tab="attributes" data-group="primary">
-						{{localize "SINLESS.System.Attributes.title"}}
-					</a>
-				</div>
-				<div class="menuBar">
-					<a class="item {{tabs.activeSkills.cssClass}}" data-action="tab" data-tab="activeSkills" data-group="primary">
-						{{localize "SINLESS.System.ActiveSkills"}}
-					</a>
-				</div>
-				<div class="menuBar">
-					<a class="item {{tabs.secondarySkills.cssClass}}" data-action="tab" data-tab="secondarySkills" data-group="primary">
-						{{localize "SINLESS.System.SecondarySkills"}}
-					</a>
-				</div>
-				<div class="menuBar">
-					<a class="item disabled" data-action="tab" data-tab="tab4" data-group="primary">
-						{{localize "SINLESS.System.Gear"}} (WIP)
-					</a>
-				</div>
-				<div class="menuBar">
-					<a class="item {{tabs.notes.cssClass}}" data-action="tab" data-tab="notes" data-group="primary">
-						{{localize "SINLESS.System.Notes"}}
-					</a>
-				</div>
-				<div class="menuBar">
-					<a class="item disabled" data-action="tab" data-tab="tab6" data-group="primary">
-						{{localize "SINLESS.System.Rigger"}} (WIP)
-					</a>
-				</div>
-				<div class="menuBar">
-					<a class="item disabled" data-action="tab" data-tab="tab7" data-group="primary">
-						{{localize "SINLESS.System.Decker"}} (WIP)
-					</a>
-				</div>
-				<div class="menuBar">
-					<a class="item disabled" data-action="tab" data-tab="tab8" data-group="primary">
-						{{localize "SINLESS.System.Mage"}} (WIP)
-					</a>
-				</div>
-				<div class="menuBar">
-					<a class="item disabled" data-action="tab" data-tab="tab9" data-group="primary">
-						{{localize "SINLESS.System.Shaman"}} (WIP)
-					</a>
-				</div>
-			</nav>
-		</div>
-		
+		<nav class="tabs vertical" data-group="primary">
+			<a class="menuItem {{tabs.attributes.cssClass}}" data-action="tab" data-tab="attributes" data-group="primary">
+				{{localize "SINLESS.System.Attributes.title"}}
+			</a>
+			<a class="menuItem {{tabs.activeSkills.cssClass}}" data-action="tab" data-tab="activeSkills" data-group="primary">
+				{{localize "SINLESS.System.ActiveSkills"}}
+			</a>
+			<a class="menuItem {{tabs.secondarySkills.cssClass}}" data-action="tab" data-tab="secondarySkills" data-group="primary">
+				{{localize "SINLESS.System.SecondarySkills"}}
+			</a>
+			<a class="menuItem disabled" data-action="tab" data-tab="tab4" data-group="primary">
+				{{localize "SINLESS.System.Gear"}} (WIP)
+			</a>
+			<a class="menuItem {{tabs.notes.cssClass}}" data-action="tab" data-tab="notes" data-group="primary">
+				{{localize "SINLESS.System.Notes"}}
+			</a>
+			<a class="menuItem disabled" data-action="tab" data-tab="tab6" data-group="primary">
+				{{localize "SINLESS.System.Rigger"}} (WIP)
+			</a>
+			<a class="menuItem disabled" data-action="tab" data-tab="tab7" data-group="primary">
+				{{localize "SINLESS.System.Decker"}} (WIP)
+			</a>
+			<a class="menuItem disabled" data-action="tab" data-tab="tab8" data-group="primary">
+				{{localize "SINLESS.System.Mage"}} (WIP)
+			</a>
+			<a class="menuItem disabled" data-action="tab" data-tab="tab9" data-group="primary">
+				{{localize "SINLESS.System.Shaman"}} (WIP)
+			</a>
+		</nav>
 	</div>
 	<section class="content">
 		{{> "systems/sinless/templates/partials/character-sheet-attributes.hbs"}}
