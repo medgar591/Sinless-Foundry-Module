@@ -1,15 +1,17 @@
 <div class="body flexrow">
 	<div class="sidebar flexcol">
-		<div class="poolsBox flexcol">
-			{{#each system.pools as |pool key|}}
-			<div class="poolLabel flex-left">{{localize (concat "SINLESS.System." key)}}</div>
-			<div class="poolEntry flexrow">
-				<input class="poolValue input" type="number" name="system.pools.{{key}}.value" value="{{pool.value}}">
-				<div class="poolDivider center"> / </div>
-				<input class="poolMax input" type="number" name="system.pools.{{key}}.max" value="{{pool.max}}" disabled>
-			</div>
-			{{/each}}
-		</div>
+		<fieldset class="poolsBox noBorder"> <legend>{{localize "SINLESS.System.Pools"}}</legend>
+			<dl class="statList">
+				{{#each system.pools as |pool key|}}
+				<dt><label for="{{key}}-value">{{localize (concat "SINLESS.System." key)}}</label></dt>
+				<dd class="flexrow">
+					<input class="poolValue input" id="{{key}}-value" type="number" name="system.pools.{{key}}.value" value="{{pool.value}}">
+					<span class="poolDivider center"> / </span>
+					<input class="poolMax input" type="number" name="system.pools.{{key}}.max" value="{{pool.max}}" readonly>
+				</dd>
+				{{/each}}
+			</dl>
+		</fieldset>
 		<div class="menuBox">
 			<nav class="tabs vertical" data-group="primary">
 				<div class="menuBar">

@@ -9,11 +9,6 @@
 	border-right: 1px solid var(--color-tabs-border);
 }
 
-.poolsBox {
-	padding-right: 8px;
-	padding-top: 8px;
-}
-
 .body {
 	height: 600px;
 }
@@ -27,7 +22,7 @@
 .menuBar > .item {
 	display: block;
 	align-content: center;
-	padding: 0.5rem 0;
+	padding: 0.4rem 0;
 	font-size: var(--font-size-16);
 }
 
@@ -91,4 +86,23 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 
 .profile-img:hover {
 	box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.noBorder {
+	border-style: none;
+}
+
+.statList {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.poolsBox {
+	padding: 0;
+	margin-top: 8px;
+	margin-right: 10px;
+}
+
+dl dd {
+    margin: 0 0 0.5rem 0.5rem;
 }
